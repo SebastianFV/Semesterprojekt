@@ -19,6 +19,7 @@ public class GUI extends javax.swing.JPanel
     public GUI() 
     {
         initComponents();
+        aquaticDisplay1.sætnavne(null);
     }
     
     void initialize()
@@ -35,22 +36,22 @@ public class GUI extends javax.swing.JPanel
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         shopName = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
-        jTabbedPane5 = new javax.swing.JTabbedPane();
+        aquaticDisplay1 = new semesterprojekt.AquaticDisplay();
+
+        jButton1.setText("jButton1");
+
+        jLabel1.setText("jLabel1");
 
         shopName.setText("Pet Shop");
 
         date.setText("Date: ");
 
-        jTabbedPane1.addTab("tab1", jTabbedPane2);
-        jTabbedPane1.addTab("tab2", jTabbedPane3);
-        jTabbedPane1.addTab("tab3", jTabbedPane4);
-        jTabbedPane1.addTab("tab4", jTabbedPane5);
+        jTabbedPane1.addTab("tab2", aquaticDisplay1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -62,7 +63,7 @@ public class GUI extends javax.swing.JPanel
                     .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(shopName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 598, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(date)))
                 .addContainerGap())
         );
@@ -73,20 +74,19 @@ public class GUI extends javax.swing.JPanel
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(shopName)
                     .addComponent(date))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
-                .addGap(36, 36, 36))
+                .addGap(18, 18, 18)
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private semesterprojekt.AquaticDisplay aquaticDisplay1;
     private javax.swing.JLabel date;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
 }

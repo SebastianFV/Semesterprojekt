@@ -11,26 +11,83 @@ package semesterprojekt;
  */
 public class Animals 
 {
-        private int yearsOld;
-	private int expectedLifeAge;
-	private String species;
-	private int weight;
-	private boolean isAlive;
-	
-	public Animals( int yearsOld, int expectedLifeAge, String species, int weight)
-	{
-            this.yearsOld = yearsOld;
-            this.expectedLifeAge = expectedLifeAge;
-            this.species = species;
-            this.weight = weight;
-            isAlive = true;
-	}
-	
-	public boolean getIsAlive()
-	{
-            return isAlive;
-	}
-	
+    private int yearsOld;
+    private int expectedLifeAge;
+    private int adultSize;
+    private String species;
+    private boolean isAlive;
+    private boolean isHerbivore;
+    private boolean isCarnivore;
+    private boolean isALoner;
+
+    public Animals( int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isAlive, boolean isHerbivore, boolean isCarnivore, boolean isALoner)
+    {
+        this.yearsOld = yearsOld;
+        this.expectedLifeAge = expectedLifeAge;
+        this.species = species;
+        this.adultSize = adultSize;
+        this.isAlive = isAlive;
+        this.isHerbivore = isHerbivore;
+        this.isCarnivore = isCarnivore;
+        this.isALoner = isALoner;
+    }
+
+    public int getYearsOld() {
+        return yearsOld;
+    }
+
+    public void setYearsOld(int yearsOld) {
+        this.yearsOld = yearsOld;
+    }
+
+    public int getExpectedLifeAge() {
+        return expectedLifeAge;
+    }
+
+    public void setExpectedLifeAge(int expectedLifeAge) {
+        this.expectedLifeAge = expectedLifeAge;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
+    public int getWeight() {
+        return adultSize;
+    }
+
+    public void setWeight(int weight) {
+        this.adultSize = weight;
+    }
+
+    public boolean isIsAlive() {
+        return isAlive;
+    }
+
+    public void setIsAlive(boolean isAlive) {
+        this.isAlive = isAlive;
+    }
+
+    public boolean isIsHerbivore() {
+        return isHerbivore;
+    }
+
+    public void setIsHerbivore(boolean isHerbivore) {
+        this.isHerbivore = isHerbivore;
+    }
+
+    public boolean isIsCarnivore() {
+        return isCarnivore;
+    }
+
+    public void setIsCarnivore(boolean isCarnivore) {
+        this.isCarnivore = isCarnivore;
+    }
+        
 	public void birthday()
 	{
             yearsOld++;
@@ -48,6 +105,6 @@ public class Animals
 	
 	public String toString()
 	{
-            return "Animal: " + species + " - Years of age: "+ yearsOld + " Years old" + " - Expected Age of Death: " + expectedLifeAge + " - Weight: " + weight + "Kg.";
+            return "Animal: " + species + " - Years of age: "+ yearsOld + " Years old" + " - Expected Age of Death: " + expectedLifeAge + " - Weight: " + adultSize + "Kg.";
 	}
 }

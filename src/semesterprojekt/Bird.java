@@ -9,17 +9,18 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Aquatic extends Animals
+public class Bird extends Animals
 {
-    int aquariumSize;
-    public Aquatic(int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
+    int birdCage;
+    public Bird(int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int birdCage, boolean isALoner, int eatingHabbits)
     {
         super(yearsOld, expectedLifeAge, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
-        this.aquariumSize = aquariumSize;
+        this.birdCage = birdCage;
     }
 
     public String toString()
     {
-        return super.toString() + "Size of aquarium: " + aquariumSize;
+        return super.toString() + "Size of bird cage: " + birdCage;
     }    
+    
 }
