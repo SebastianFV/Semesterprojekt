@@ -19,7 +19,7 @@ public class GUI extends javax.swing.JPanel
     public GUI() 
     {
         initComponents();
-        aquaticDisplay1.sætnavne(null);
+        aquaticDisplay2.sætnavne(null);
     }
     
     void initialize()
@@ -40,8 +40,8 @@ public class GUI extends javax.swing.JPanel
         jLabel1 = new javax.swing.JLabel();
         shopName = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        aquaticDisplay1 = new semesterprojekt.AquaticDisplay();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        aquaticDisplay2 = new semesterprojekt.AquaticDisplay();
 
         jButton1.setText("jButton1");
 
@@ -51,7 +51,7 @@ public class GUI extends javax.swing.JPanel
 
         date.setText("Date: ");
 
-        jTabbedPane1.addTab("tab1", aquaticDisplay1);
+        jTabbedPane2.addTab("tab1", aquaticDisplay2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -60,7 +60,7 @@ public class GUI extends javax.swing.JPanel
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1)
+                    .addComponent(jTabbedPane2)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(shopName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
@@ -74,19 +74,19 @@ public class GUI extends javax.swing.JPanel
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(shopName)
                     .addComponent(date))
-                .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private semesterprojekt.AquaticDisplay aquaticDisplay1;
+    private semesterprojekt.AquaticDisplay aquaticDisplay2;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
 }
