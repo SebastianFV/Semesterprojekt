@@ -11,9 +11,9 @@ package semesterprojekt;
  */
 public class Overview 
 {
-    Reptile frog = new Reptile(0, 0, "Frog", 0, true, true, 0, true, 0);
-    Aquatic turtle = new Aquatic(1, 0, "turtle", 0, true, true, 0, true, 0);
-    Bird dove = new Bird(2, 10, "Dove", 0, true, true, 0, true, 0);
+    Reptile frog = new Reptile(0, 0, 0, "Frog", 0, true, true, 0, true, 0);
+    Aquatic turtle = new Aquatic(1, 0, 0, "turtle", 0, true, true, 0, true, 0);
+    Bird dove = new Bird(2, 10, 0, "Dove", 0, true, true, 0, true, 0);
     Mammal dog;
     
 }

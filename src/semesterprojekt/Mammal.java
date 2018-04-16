@@ -13,9 +13,9 @@ public class Mammal extends Animals
 {
     String activity;
     int sizeOfLitter;
-    public Mammal(int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int sizeOfLitter, boolean isALoner, int eatingHabbits, String activity)
+    public Mammal(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int sizeOfLitter, boolean isALoner, int eatingHabbits, String activity)
     {
-        super(yearsOld, expectedLifeAge, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
+        super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
         this.activity = activity;
         this.sizeOfLitter = sizeOfLitter;
     }

@@ -14,16 +14,18 @@ public class Animals
     private int yearsOld;
     private int expectedLifeAge;
     private int adultSize;
+    private int price;
     private String species;
     private boolean isAlive;
     private boolean isHerbivore;
     private boolean isCarnivore;
     private boolean isALoner;
 
-    public Animals( int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isAlive, boolean isHerbivore, boolean isCarnivore, boolean isALoner)
+    public Animals( int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isAlive, boolean isHerbivore, boolean isCarnivore, boolean isALoner)
     {
         this.yearsOld = yearsOld;
         this.expectedLifeAge = expectedLifeAge;
+        this.price = price;
         this.species = species;
         this.adultSize = adultSize;
         this.isAlive = isAlive;

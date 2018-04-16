@@ -12,9 +12,9 @@ package semesterprojekt;
 public class Aquatic extends Animals
 {
     int aquariumSize;
-    public Aquatic(int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
+    public Aquatic(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
     {
-        super(yearsOld, expectedLifeAge, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
+        super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
         this.aquariumSize = aquariumSize;
     }
 

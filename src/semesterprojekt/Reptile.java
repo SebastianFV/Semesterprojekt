@@ -13,9 +13,9 @@ public class Reptile extends Animals
 {
     int terrariumSize;
     int eatingHabbits;
-    public Reptile(int yearsOld, int expectedLifeAge, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int terrariumSize, boolean isALoner, int eatingHabbits)
+    public Reptile(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int terrariumSize, boolean isALoner, int eatingHabbits)
     {
-        super(yearsOld, expectedLifeAge, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
+        super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
         this.terrariumSize = terrariumSize;
         this.eatingHabbits = eatingHabbits;
     }
