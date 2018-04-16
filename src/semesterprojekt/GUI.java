@@ -19,7 +19,10 @@ public class GUI extends javax.swing.JPanel
     public GUI() 
     {
         initComponents();
-        aquaticDisplay2.sætnavne(null);
+        aquaticDisplay1.sætnavneAquatic(null);
+        aquaticDisplay2.sætnavneReptile(null);
+        aquaticDisplay3.sætnavneMammal(null);
+        aquaticDisplay4.sætnavneBird(null);
     }
     
     void initialize()
@@ -41,7 +44,10 @@ public class GUI extends javax.swing.JPanel
         shopName = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
+        aquaticDisplay1 = new semesterprojekt.AquaticDisplay();
         aquaticDisplay2 = new semesterprojekt.AquaticDisplay();
+        aquaticDisplay3 = new semesterprojekt.AquaticDisplay();
+        aquaticDisplay4 = new semesterprojekt.AquaticDisplay();
 
         jButton1.setText("jButton1");
 
@@ -51,7 +57,10 @@ public class GUI extends javax.swing.JPanel
 
         date.setText("Date: ");
 
-        jTabbedPane2.addTab("tab1", aquaticDisplay2);
+        jTabbedPane2.addTab("Aquatic", aquaticDisplay1);
+        jTabbedPane2.addTab("Reptile", aquaticDisplay2);
+        jTabbedPane2.addTab("Mammal", aquaticDisplay3);
+        jTabbedPane2.addTab("Bird", aquaticDisplay4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -82,7 +91,10 @@ public class GUI extends javax.swing.JPanel
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private semesterprojekt.AquaticDisplay aquaticDisplay1;
     private semesterprojekt.AquaticDisplay aquaticDisplay2;
+    private semesterprojekt.AquaticDisplay aquaticDisplay3;
+    private semesterprojekt.AquaticDisplay aquaticDisplay4;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
