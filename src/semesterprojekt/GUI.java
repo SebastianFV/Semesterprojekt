@@ -51,7 +51,7 @@ public class GUI extends javax.swing.JPanel
 
         date.setText("Date: ");
 
-        jTabbedPane1.addTab("tab2", aquaticDisplay1);
+        jTabbedPane1.addTab("tab1", aquaticDisplay1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -63,7 +63,7 @@ public class GUI extends javax.swing.JPanel
                     .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(shopName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
                         .addComponent(date)))
                 .addContainerGap())
         );
@@ -75,7 +75,7 @@ public class GUI extends javax.swing.JPanel
                     .addComponent(shopName)
                     .addComponent(date))
                 .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
