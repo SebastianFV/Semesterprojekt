@@ -18,6 +18,14 @@ public class Aquatic extends Animals
         this.aquariumSize = aquariumSize;
     }
 
+    public int getAquariumSize() {
+        return aquariumSize;
+    }
+
+    public void setAquariumSize(int aquariumSize) {
+        this.aquariumSize = aquariumSize;
+    }
+
     public String toString()
     {
         return super.toString() + "Size of aquarium: " + aquariumSize;

@@ -20,6 +20,22 @@ public class Mammal extends Animals
         this.sizeOfLitter = sizeOfLitter;
     }
 
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+
+    public int getSizeOfLitter() {
+        return sizeOfLitter;
+    }
+
+    public void setSizeOfLitter(int sizeOfLitter) {
+        this.sizeOfLitter = sizeOfLitter;
+    }
+
     public String toString()
     {
         return super.toString() + "Amount of children: " + sizeOfLitter + "Activity for the pet: " + activity;

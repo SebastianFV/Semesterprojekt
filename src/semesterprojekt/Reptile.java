@@ -11,6 +11,22 @@ package semesterprojekt;
  */
 public class Reptile extends Animals
 {
+
+    public int getTerrariumSize() {
+        return terrariumSize;
+    }
+
+    public void setTerrariumSize(int terrariumSize) {
+        this.terrariumSize = terrariumSize;
+    }
+
+    public int getEatingHabbits() {
+        return eatingHabbits;
+    }
+
+    public void setEatingHabbits(int eatingHabbits) {
+        this.eatingHabbits = eatingHabbits;
+    }
     int terrariumSize;
     int eatingHabbits;
     public Reptile(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int terrariumSize, boolean isALoner, int eatingHabbits)

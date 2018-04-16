@@ -13,12 +13,22 @@ import java.util.Date;
  */
 public class Display 
 {
+    Reptile reptile;
+    Aquatic aquatic;
+    Bird bird;
+    Mammal mammal;
     
     public String getTime()
     {
         Date dato = new Date();
         String time = dato.toString();
         return time;
+    }
+    
+    public int showPrice()
+    {
+        return reptile.getPrice();
+        
     }
     
 }

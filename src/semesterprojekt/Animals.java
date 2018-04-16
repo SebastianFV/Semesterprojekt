@@ -34,6 +34,30 @@ public class Animals
         this.isALoner = isALoner;
     }
 
+    public int getAdultSize() {
+        return adultSize;
+    }
+
+    public void setAdultSize(int adultSize) {
+        this.adultSize = adultSize;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public boolean isIsALoner() {
+        return isALoner;
+    }
+
+    public void setIsALoner(boolean isALoner) {
+        this.isALoner = isALoner;
+    }
+
     public int getYearsOld() {
         return yearsOld;
     }

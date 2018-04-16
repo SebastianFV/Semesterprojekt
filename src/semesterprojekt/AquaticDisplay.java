@@ -52,6 +52,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
         choice1.addItem("Dragon");
     }
     
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

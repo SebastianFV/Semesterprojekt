@@ -18,6 +18,14 @@ public class Bird extends Animals
         this.birdCage = birdCage;
     }
 
+    public int getBirdCage() {
+        return birdCage;
+    }
+
+    public void setBirdCage(int birdCage) {
+        this.birdCage = birdCage;
+    }
+
     public String toString()
     {
         return super.toString() + "Size of bird cage: " + birdCage;
