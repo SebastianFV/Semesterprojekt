@@ -20,15 +20,37 @@ public class AquaticDisplay extends javax.swing.JPanel {
         initComponents();
     }
     
-    public void sætnavne(ArrayList<String> nn) {
+    public void sætnavneAquatic(ArrayList<String> nn) {
         choice1.removeAll();
-        choice1.addItem("s11dsdsd");
-        choice1.addItem("sded");
-        choice1.addItem("sdsdsd");
-        choice1.addItem("sds33dsd");
-        choice1.addItem("sdsdsd");
+        choice1.addItem("Goldfish");
+        choice1.addItem("Whale");
+        choice1.addItem("Shark");
+        choice1.addItem("Dolphin");
+        choice1.addItem("Sea cucumber");
     }
-    
+    public void sætnavneBird(ArrayList<String> nn) {
+        choice1.removeAll();
+        choice1.addItem("Dove");
+        choice1.addItem("Pidgeon");
+        choice1.addItem("Small bird");
+        choice1.addItem("Big bird");
+    }
+    public void sætnavneMammal(ArrayList<String> nn) {
+        choice1.removeAll();
+        choice1.addItem("Ape");
+        choice1.addItem("Elephant");
+        choice1.addItem("Horse");
+        choice1.addItem("Dog");
+        choice1.addItem("Tiger");
+    }
+    public void sætnavneReptile(ArrayList<String> nn) {
+        choice1.removeAll();
+        choice1.addItem("Snake");
+        choice1.addItem("Turtle");
+        choice1.addItem("Salamander");
+        choice1.addItem("Dinosaur");
+        choice1.addItem("Dragon");
+    }
     
 
     /**
@@ -88,9 +110,9 @@ public class AquaticDisplay extends javax.swing.JPanel {
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(41, 41, 41)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(animalPrice))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                            .addComponent(animalPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(31, 31, 31))
         );
         layout.setVerticalGroup(
