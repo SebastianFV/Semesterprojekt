@@ -22,7 +22,7 @@ public class Semesterprojekt
         GUI gui = new GUI();
         gui.display = display;
         gui.initialize();
-        JFrame vindue = new JFrame("Billetautomat");
+        JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         vindue.setSize(1000, 700);
