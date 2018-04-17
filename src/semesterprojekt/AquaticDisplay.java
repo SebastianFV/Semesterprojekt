@@ -12,10 +12,12 @@ import java.util.ArrayList;
  * @author Squid
  */
 public class AquaticDisplay extends javax.swing.JPanel {
+    
+    Reptile reptile;
+    Aquatic aquatic;
+    Bird bird;
+    Mammal mammal;
 
-    /**
-     * Creates new form FrontPage
-     */
     public AquaticDisplay() {
         initComponents();
     }
@@ -51,7 +53,9 @@ public class AquaticDisplay extends javax.swing.JPanel {
         choice1.addItem("Dinosaur");
         choice1.addItem("Dragon");
     }
-    
+    public void setPrice (){
+        animalPrice.setText("" + aquatic.getPrice());
+    }
     
 
     /**
