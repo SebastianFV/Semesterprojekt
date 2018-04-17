@@ -19,6 +19,7 @@ public class Semesterprojekt
     public static void main(String[] args) 
     {
         Display display = new Display();
+        Overview overview = new Overview();
         GUI gui = new GUI();
         gui.display = display;
         gui.initialize();

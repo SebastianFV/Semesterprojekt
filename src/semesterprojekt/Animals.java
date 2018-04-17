@@ -15,6 +15,7 @@ public class Animals
     private int expectedLifeAge;
     private int adultSize;
     private int price;
+    private int antal;
     private String species;
     private boolean isAlive;
     private boolean isHerbivore;
@@ -26,6 +27,7 @@ public class Animals
         this.yearsOld = yearsOld;
         this.expectedLifeAge = expectedLifeAge;
         this.price = price;
+        this.antal = antal;
         this.species = species;
         this.adultSize = adultSize;
         this.isAlive = isAlive;
@@ -49,7 +51,15 @@ public class Animals
     public void setPrice(int price) {
         this.price = price;
     }
+    
+    public int getAntal() {
+        return antal;
+    }
 
+    public void setAntal(int Antal) {
+        this.price = Antal;
+    }
+    
     public boolean isIsALoner() {
         return isALoner;
     }
