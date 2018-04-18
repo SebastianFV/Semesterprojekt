@@ -19,6 +19,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
     Mammal mammal;
     Animals animals;
     int value;
+    
 
     public AquaticDisplay() {
         initComponents();
@@ -61,8 +62,12 @@ public class AquaticDisplay extends javax.swing.JPanel {
     public void setAntal(){
         Antal.setText("" + animals.getAntal());
     }
-    public void getAntal(){
+    public int getAntal(){
         value = Integer.parseInt(Antal.getText());
+        return value;
+    }
+    public void tilføjTilKurv(){
+        
     }
     
     

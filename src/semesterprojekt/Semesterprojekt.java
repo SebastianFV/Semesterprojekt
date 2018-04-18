@@ -13,12 +13,13 @@ import javax.swing.JFrame;
  */
 public class Semesterprojekt 
 {
+    static int finalPrice;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) 
     {
-        Display display = new Display();
+        Display display = new Display();        
         Overview overview = new Overview();
         GUI gui = new GUI();
         gui.display = display;
@@ -29,7 +30,9 @@ public class Semesterprojekt
         vindue.setSize(1000, 700);
         vindue.setVisible(true);
         
-        
+        while (true)
+        {
+        }
 //        Carnivore tiger = new Carnivore(3, 30, "Tiger", 50, 10);
 //	while (tiger.getIsAlive())
 //	{
