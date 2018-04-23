@@ -56,6 +56,14 @@ public class Basket {
         }
        return 0;
     }
+    public int samletPris()
+    {
+        for (basket cos : kunder)
+        {
+            return cos.getAntal() * cos.getPrice();
+        }
+        return 0;
+    }
 //    
 //    public int getRetur()
 //    {
