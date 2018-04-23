@@ -17,18 +17,26 @@ public class Display
     Aquatic aquatic;
     Bird bird;
     Mammal mammal;
+    static int ID;
     
-    public String getTime()
+    public static String getTime()
     {
         Date dato = new Date();
         String time = dato.toString();
         return time;
     }
-    
-    public int showPrice()
-    {
-        return reptile.getPrice();
-        
+
+    public static int getID() {
+        return ID;
     }
+
+    public static void setID() {
+        ID = ID++;
+    }
+    
+    
+    
+    
+    
     
 }

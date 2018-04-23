@@ -9,8 +9,10 @@ package semesterprojekt;
  *
  * @author Nicho
  */
-public class Kvittering extends javax.swing.JPanel {
-    Display display;
+public class Kvittering extends javax.swing.JPanel 
+{
+//    Display display;
+//    GUI gui;
     /**
      * Creates new form Kvittering
      */
@@ -19,13 +21,15 @@ public class Kvittering extends javax.swing.JPanel {
     public Kvittering() 
     {
         initComponents();
+//        display = new Display();
     }
     
     
     void initialize()
     {
-        date.setText("Date:  lol" + display.getTime());
-        costumerNum.setText("No:" + ID);
+        System.out.println("semesterprojekt.Kvittering.initialize()");
+        date.setText("Date: " + Display.getTime());
+        costumerNum.setText("No:" + Display.getID());
     }
 
     /**
