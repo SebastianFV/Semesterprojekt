@@ -54,25 +54,25 @@ public class Kvittering extends javax.swing.JPanel
         jLabel24 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Petshop1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        CVR = new javax.swing.JLabel();
+        Istedgade = new javax.swing.JLabel();
+        adresse = new javax.swing.JLabel();
+        tlf = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         costumerNum = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
+        item1 = new javax.swing.JLabel();
+        amount1 = new javax.swing.JLabel();
+        price1 = new javax.swing.JLabel();
+        item2 = new javax.swing.JLabel();
+        amount2 = new javax.swing.JLabel();
+        price2 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
+        total = new javax.swing.JLabel();
+        inDkk = new javax.swing.JLabel();
+        totalPrice = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
-        jLabel34 = new javax.swing.JLabel();
+        thanksForVisiting = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
 
         Petshop2.setText("Pet Shop");
@@ -153,35 +153,35 @@ public class Kvittering extends javax.swing.JPanel
 
         Petshop1.setText("Pet Shop");
 
-        jLabel9.setText("CVR: 394xx17");
+        CVR.setText("CVR: 394xx17");
 
-        jLabel10.setText("Istedgade 89");
+        Istedgade.setText("Istedgade 89");
 
-        jLabel11.setText("1650 København V");
+        adresse.setText("1650 København V");
 
-        jLabel12.setText("Tlf: +45 45 45 xx 45");
+        tlf.setText("Tlf: +45 45 45 xx 45");
 
         costumerNum.setText("No:");
 
-        jLabel25.setText("Item");
+        item1.setText("Item");
 
-        jLabel26.setText("Amount");
+        amount1.setText("Amount");
 
-        jLabel27.setText("Price");
+        price1.setText("Price");
 
-        jLabel28.setText("item");
+        item2.setText("item");
 
-        jLabel29.setText("Amount");
+        amount2.setText("Amount");
 
-        jLabel30.setText("Price");
+        price2.setText("Price");
 
-        jLabel31.setText("Total");
+        total.setText("Total");
 
-        jLabel32.setText("In DKK");
+        inDkk.setText("In DKK");
 
-        jLabel33.setText("Total price");
+        totalPrice.setText("Total price");
 
-        jLabel34.setText("Thansk for visiting, see you soon");
+        thanksForVisiting.setText("Thansk for visiting, see you soon");
 
         date.setText("Date: ");
 
@@ -196,25 +196,25 @@ public class Kvittering extends javax.swing.JPanel
                             .addGap(152, 152, 152)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(Petshop1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addComponent(CVR, javax.swing.GroupLayout.Alignment.LEADING)))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(131, 131, 131)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel12)
+                                .addComponent(tlf)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(11, 11, 11)
-                                        .addComponent(jLabel10))
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                        .addComponent(Istedgade))
+                                    .addComponent(adresse, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel31)
+                                    .addComponent(total)
                                     .addGap(68, 68, 68)
-                                    .addComponent(jLabel32)
+                                    .addComponent(inDkk)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel33))
+                                    .addComponent(totalPrice))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(date)
                                     .addGap(212, 212, 212)
@@ -223,23 +223,23 @@ public class Kvittering extends javax.swing.JPanel
                                 .addComponent(jSeparator2)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel25)
-                                        .addComponent(jLabel28))
+                                        .addComponent(item1)
+                                        .addComponent(item2))
                                     .addGap(71, 71, 71)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel26)
-                                        .addComponent(jLabel29))
+                                        .addComponent(amount1)
+                                        .addComponent(amount2))
                                     .addGap(180, 199, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel30)
-                                        .addComponent(jLabel27)))
+                                        .addComponent(price2)
+                                        .addComponent(price1)))
                                 .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jLabel34)))
+                        .addComponent(thanksForVisiting)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -248,13 +248,13 @@ public class Kvittering extends javax.swing.JPanel
                 .addContainerGap()
                 .addComponent(Petshop1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addComponent(CVR)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
+                .addComponent(Istedgade)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11)
+                .addComponent(adresse)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel12)
+                .addComponent(tlf)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
@@ -265,25 +265,25 @@ public class Kvittering extends javax.swing.JPanel
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(jLabel26)
-                    .addComponent(jLabel27))
+                    .addComponent(item1)
+                    .addComponent(amount1)
+                    .addComponent(price1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel29)
-                    .addComponent(jLabel30))
+                    .addComponent(item2)
+                    .addComponent(amount2)
+                    .addComponent(price2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(jLabel32)
-                    .addComponent(jLabel33))
+                    .addComponent(total)
+                    .addComponent(inDkk)
+                    .addComponent(totalPrice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel34)
+                .addComponent(thanksForVisiting)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -304,13 +304,18 @@ public class Kvittering extends javax.swing.JPanel
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CVR;
+    private javax.swing.JLabel Istedgade;
     private javax.swing.JLabel Petshop1;
     private javax.swing.JLabel Petshop2;
+    private javax.swing.JLabel adresse;
+    private javax.swing.JLabel amount1;
+    private javax.swing.JLabel amount2;
     private javax.swing.JLabel costumerNum;
     private javax.swing.JLabel date;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel inDkk;
+    private javax.swing.JLabel item1;
+    private javax.swing.JLabel item2;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -319,17 +324,6 @@ public class Kvittering extends javax.swing.JPanel
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator2;
@@ -337,5 +331,11 @@ public class Kvittering extends javax.swing.JPanel
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JLabel price1;
+    private javax.swing.JLabel price2;
+    private javax.swing.JLabel thanksForVisiting;
+    private javax.swing.JLabel tlf;
+    private javax.swing.JLabel total;
+    private javax.swing.JLabel totalPrice;
     // End of variables declaration//GEN-END:variables
 }
