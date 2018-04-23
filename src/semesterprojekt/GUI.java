@@ -41,6 +41,7 @@ public class GUI extends javax.swing.JPanel
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        kvittering2 = new semesterprojekt.Kvittering();
         shopName = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -48,6 +49,7 @@ public class GUI extends javax.swing.JPanel
         aquaticDisplay2 = new semesterprojekt.AquaticDisplay();
         aquaticDisplay3 = new semesterprojekt.AquaticDisplay();
         aquaticDisplay4 = new semesterprojekt.AquaticDisplay();
+        kvittering1 = new semesterprojekt.Kvittering();
 
         jButton1.setText("jButton1");
 
@@ -72,8 +74,11 @@ public class GUI extends javax.swing.JPanel
                     .addComponent(jTabbedPane2)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(shopName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
-                        .addComponent(date)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(date))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(kvittering1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -84,8 +89,9 @@ public class GUI extends javax.swing.JPanel
                     .addComponent(shopName)
                     .addComponent(date))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kvittering1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -99,6 +105,8 @@ public class GUI extends javax.swing.JPanel
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private semesterprojekt.Kvittering kvittering1;
+    private semesterprojekt.Kvittering kvittering2;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
 }

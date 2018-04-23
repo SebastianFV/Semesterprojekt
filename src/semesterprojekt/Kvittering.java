@@ -151,7 +151,7 @@ public class Kvittering extends javax.swing.JPanel {
 
         jLabel13.setText("Date:");
 
-        jLabel14.setText("jLabel6");
+        jLabel14.setText("dato");
 
         jLabel15.setText("No:");
 
