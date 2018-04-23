@@ -11,7 +11,7 @@ import javax.swing.JFrame;
  *
  * @author Squid
  */
-public class Main 
+public class BenytDyreshop 
 {
     static int finalPrice;
     /**
@@ -31,10 +31,10 @@ public class Main
         vindue.setVisible(true);
         System.out.println("Hello world");
         
-        while (true)
-        {
-            
-        }
+//        while (true)
+//        {
+//            
+//        }
 //        Carnivore tiger = new Carnivore(3, 30, "Tiger", 50, 10);
 //	while (tiger.getIsAlive())
 //	{
