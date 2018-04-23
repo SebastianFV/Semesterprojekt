@@ -32,6 +32,7 @@ public class Main
         
         while (true)
         {
+            
         }
 //        Carnivore tiger = new Carnivore(3, 30, "Tiger", 50, 10);
 //	while (tiger.getIsAlive())
