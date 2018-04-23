@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package semesterprojekt;
-import java.util.Date;
 /**
  *
  * @author Squid
@@ -71,7 +70,7 @@ public class GUI extends javax.swing.JPanel
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane2)
+                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(shopName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
