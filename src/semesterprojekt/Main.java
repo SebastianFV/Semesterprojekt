@@ -19,16 +19,17 @@ public class Main
      */
     public static void main(String[] args) 
     {
-        Display display = new Display();        
+//        Display display = new Display();        
         Overview overview = new Overview();
         GUI gui = new GUI();
-        gui.display = display;
+//        gui.display = display;
         gui.initialize();
         JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         vindue.setSize(1000, 700);
         vindue.setVisible(true);
+        System.out.println("Hello world");
         
         while (true)
         {

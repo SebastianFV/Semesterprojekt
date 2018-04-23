@@ -10,7 +10,7 @@ package semesterprojekt;
  */
 public class GUI extends javax.swing.JPanel 
 {
-    Display display;
+//    Display display;
 
     /**
      * Creates new form GUI
@@ -22,11 +22,15 @@ public class GUI extends javax.swing.JPanel
         aquaticDisplay2.sætnavneReptile(null);
         aquaticDisplay3.sætnavneMammal(null);
         aquaticDisplay4.sætnavneBird(null);
+        
     }
     
     void initialize()
     {
-        date.setText("Date: " + display.getTime());
+        date.setText("Date: " + Display.getTime());
+        System.out.println("Initialize "+kvittering1);
+        kvittering1.initialize();
+        
     }
 
     /**
@@ -40,7 +44,7 @@ public class GUI extends javax.swing.JPanel
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        kvittering2 = new semesterprojekt.Kvittering();
+        brugesIkke = new semesterprojekt.Kvittering();
         shopName = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -100,12 +104,12 @@ public class GUI extends javax.swing.JPanel
     private semesterprojekt.AquaticDisplay aquaticDisplay2;
     private semesterprojekt.AquaticDisplay aquaticDisplay3;
     private semesterprojekt.AquaticDisplay aquaticDisplay4;
+    private semesterprojekt.Kvittering brugesIkke;
     private javax.swing.JLabel date;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private semesterprojekt.Kvittering kvittering1;
-    private semesterprojekt.Kvittering kvittering2;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
 }
