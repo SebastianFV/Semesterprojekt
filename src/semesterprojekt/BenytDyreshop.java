@@ -6,7 +6,6 @@
 package semesterprojekt;
 
 import javax.swing.JFrame;
-
 /**
  *
  * @author Squid
@@ -17,9 +16,11 @@ public class BenytDyreshop
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) 
+    public static void main(String[] args) throws InterruptedException 
     {
-//        Display display = new Display();        
+//        Display display = new Display(); 
+        
+        AquaticDisplay aquaticDisplay = new AquaticDisplay();
         Overview overview = new Overview();
         GUI gui = new GUI();
 //        gui.display = display;
@@ -27,14 +28,15 @@ public class BenytDyreshop
         JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        vindue.setSize(1000, 700);
+        vindue.setSize(700, 700);
         vindue.setVisible(true);
         System.out.println("Hello world");
         
-//        while (true)
-//        {
-//            
-//        }
+        while (true)
+        {
+            aquaticDisplay.printSelect();
+              Thread.sleep(1000);
+        }
 //        Carnivore tiger = new Carnivore(3, 30, "Tiger", 50, 10);
 //	while (tiger.getIsAlive())
 //	{

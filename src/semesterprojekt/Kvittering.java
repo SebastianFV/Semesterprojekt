@@ -24,6 +24,7 @@ public class Kvittering extends javax.swing.JPanel
 //        display = new Display();
     }
     
+
     
     void initialize()
     {

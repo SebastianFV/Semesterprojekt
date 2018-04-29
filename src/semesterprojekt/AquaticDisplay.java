@@ -19,6 +19,8 @@ public class AquaticDisplay extends javax.swing.JPanel {
     Mammal mammal;
     Animals animals;
     int value;
+    int item;
+    String dyr;
     
 
     public AquaticDisplay() {
@@ -69,9 +71,22 @@ public class AquaticDisplay extends javax.swing.JPanel {
     public void tilføjTilKurv(){
         
     }
-    
-    
 
+    public int getSelectAnimal(){
+        item = choice1.getSelectedIndex();
+        return item;
+    }
+
+    public void printSelect(){
+        System.out.println(getSelectAnimal());
+        System.out.println(getSelectAnimal2());
+        System.out.println(getAntal());
+    }
+    
+    public String getSelectAnimal2(){
+        dyr = choice1.getSelectedItem();
+        return dyr;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
