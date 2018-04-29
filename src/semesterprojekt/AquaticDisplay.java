@@ -58,34 +58,25 @@ public class AquaticDisplay extends javax.swing.JPanel {
         choice1.addItem("Dinosaur");
         choice1.addItem("Dragon");
     }
+    
     public void getPrice (){
         animalPrice.setText("" + animals.getPrice());
     }
+    
     public void setAntal(){
-        Antal.setText("" + animals.getAntal());
+        Antal.setValue("" + animals.getAntal());
     }
     
     public int getAntal(){
-        value = Integer.parseInt(Antal.getText());
+        value = (Integer) Antal.getValue();
         return value;
     }
     
     public void tilføjTilKurv(){
         
     }
-
-    public int getSelectAnimal(){
-        item = choice1.getSelectedIndex();
-        return item;
-    }
-
-    public void printSelect(){
-        System.out.println(getSelectAnimal());
-        System.out.println(getSelectAnimal2());
-        System.out.println(getAntal());
-    }
     
-    public String getSelectAnimal2(){
+    public String getSelectAnimal(){
         dyr = choice1.getSelectedItem();
         return dyr;
     }
@@ -120,6 +111,8 @@ public class AquaticDisplay extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        Antal.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
