@@ -18,12 +18,10 @@ public class BenytDyreshop
      */
     public static void main(String[] args) throws InterruptedException 
     {
-//        Display display = new Display(); 
         
         AquaticDisplay aquaticDisplay = new AquaticDisplay();
         Overview overview = new Overview();
         GUI gui = new GUI();
-//        gui.display = display;
         gui.initialize();
         JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
