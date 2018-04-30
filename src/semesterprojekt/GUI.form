@@ -35,12 +35,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jTabbedPane2" pref="443" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="shopName" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="date" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="kvittering1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="shopName" min="-2" max="-2" attributes="0"/>
+                          <Component id="kvittering1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -52,10 +50,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="shopName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="date" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="shopName" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jTabbedPane2" pref="159" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -68,11 +63,6 @@
     <Component class="javax.swing.JLabel" name="shopName">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pet Shop"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="date">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Date: "/>
       </Properties>
     </Component>
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">

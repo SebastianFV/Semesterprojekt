@@ -21,7 +21,7 @@ public class Kvittering extends javax.swing.JPanel
     public Kvittering() 
     {
         initComponents();
-//        display = new Display();
+        Dyreshop.setID();
     }
     
 
@@ -29,8 +29,8 @@ public class Kvittering extends javax.swing.JPanel
     void initialize()
     {
         System.out.println("semesterprojekt.Kvittering.initialize()");
-        date.setText("Date: " + Display.getTime());
-        costumerNum.setText("No:" + Display.getID());
+        date.setText("Date: " + Dyreshop.getTime());
+        costumerID.setText("No:" + Dyreshop.ID);
     }
 
     /**
@@ -60,7 +60,7 @@ public class Kvittering extends javax.swing.JPanel
         adresse = new javax.swing.JLabel();
         tlf = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        costumerNum = new javax.swing.JLabel();
+        costumerID = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         item1 = new javax.swing.JLabel();
         amount1 = new javax.swing.JLabel();
@@ -162,7 +162,7 @@ public class Kvittering extends javax.swing.JPanel
 
         tlf.setText("Tlf: +45 45 45 xx 45");
 
-        costumerNum.setText("No:");
+        costumerID.setText("No:");
 
         item1.setText("Item");
 
@@ -219,7 +219,7 @@ public class Kvittering extends javax.swing.JPanel
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(date)
                                     .addGap(212, 212, 212)
-                                    .addComponent(costumerNum))
+                                    .addComponent(costumerID))
                                 .addComponent(jSeparator4)
                                 .addComponent(jSeparator2)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -260,7 +260,7 @@ public class Kvittering extends javax.swing.JPanel
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(costumerNum)
+                    .addComponent(costumerID)
                     .addComponent(date))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -312,7 +312,7 @@ public class Kvittering extends javax.swing.JPanel
     private javax.swing.JLabel adresse;
     private javax.swing.JLabel amount1;
     private javax.swing.JLabel amount2;
-    private javax.swing.JLabel costumerNum;
+    private javax.swing.JLabel costumerID;
     private javax.swing.JLabel date;
     private javax.swing.JLabel inDkk;
     private javax.swing.JLabel item1;

@@ -197,7 +197,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="date" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
-                                      <Component id="costumerNum" min="-2" max="-2" attributes="0"/>
+                                      <Component id="costumerID" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
@@ -251,7 +251,7 @@
                   <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="costumerNum" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="costumerID" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="date" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -313,7 +313,7 @@
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator2">
         </Component>
-        <Component class="javax.swing.JLabel" name="costumerNum">
+        <Component class="javax.swing.JLabel" name="costumerID">
           <Properties>
             <Property name="text" type="java.lang.String" value="No:"/>
           </Properties>

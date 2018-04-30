@@ -56,7 +56,7 @@ public class GUI extends javax.swing.JPanel
         }
     void initialize()
     {
-        date.setText("Date: " + Display.getTime());
+//        date.setText("Date: " + Dyreshop.getTime());
         System.out.println("Initialize "+kvittering1);
         kvittering1.initialize();
         
@@ -87,7 +87,6 @@ public void getAnimalx()
         jLabel1 = new javax.swing.JLabel();
         brugesIkke = new semesterprojekt.Kvittering();
         shopName = new javax.swing.JLabel();
-        date = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         aquaticDisplay1 = new semesterprojekt.AquaticDisplay();
         aquaticDisplay2 = new semesterprojekt.AquaticDisplay();
@@ -100,8 +99,6 @@ public void getAnimalx()
         jLabel1.setText("jLabel1");
 
         shopName.setText("Pet Shop");
-
-        date.setText("Date: ");
 
         jTabbedPane2.addTab("Aquatic", aquaticDisplay1);
         jTabbedPane2.addTab("Reptile", aquaticDisplay2);
@@ -117,11 +114,9 @@ public void getAnimalx()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(shopName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(date))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(kvittering1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(shopName)
+                            .addComponent(kvittering1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -129,9 +124,7 @@ public void getAnimalx()
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(shopName)
-                    .addComponent(date))
+                .addComponent(shopName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -146,7 +139,6 @@ public void getAnimalx()
     private semesterprojekt.AquaticDisplay aquaticDisplay3;
     private semesterprojekt.AquaticDisplay aquaticDisplay4;
     private semesterprojekt.Kvittering brugesIkke;
-    private javax.swing.JLabel date;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane2;

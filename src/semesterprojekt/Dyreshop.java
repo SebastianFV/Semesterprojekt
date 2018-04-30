@@ -11,13 +11,13 @@ import java.util.Date;
  *
  * @author Squid
  */
-public class Display 
+public class Dyreshop 
 {
     Reptile reptile;
     Aquatic aquatic;
     Bird bird;
     Mammal mammal;
-    static int ID;
+    static int ID = 10000;
     
     public static String getTime()
     {
@@ -26,13 +26,17 @@ public class Display
         return time;
     }
 
-    public static int getID() {
+    public static int getID() 
+    {
         return ID;
     }
 
-    public static void setID() {
+    public static void setID() 
+    {
         ID = ID++;
     }
+    
+    
     
     
     
