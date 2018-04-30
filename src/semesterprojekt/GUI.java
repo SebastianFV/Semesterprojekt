@@ -13,7 +13,10 @@ import java.util.ArrayList;
  */
 public class GUI extends javax.swing.JPanel 
 {
-      Basket basket = new Basket();
+    Receipt receipt;
+    Basket basket = new Basket();
+    Overview animals = new Overview();
+
 //    Display display;
 
     /**
@@ -21,9 +24,9 @@ public class GUI extends javax.swing.JPanel
      */
     public GUI() 
     {
-        ArrayList<Aquatic> aquatic;
-        aquatic = new ArrayList<>();
-        aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
+//        ArrayList<Aquatic> aquatic;
+//        aquatic = new ArrayList<>();
+//        aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
         initComponents();
         paneDisplay1.setnavneAquatic(null);
         paneDisplay2.setnavneReptile(null);
@@ -69,7 +72,6 @@ public class GUI extends javax.swing.JPanel
     void initialize()
     {
 //        date.setText("Date: " + Dyreshop.getTime());
-        Overview.makeAnimals();
         System.out.println("Initialize "+kvittering1);
         kvittering1.initialize();
     }
@@ -82,14 +84,15 @@ public class GUI extends javax.swing.JPanel
 public void getAnimalx()
 {
 //    Overview.makeAnimals();
-    Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
+//    Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
     if (PaneDisplay.button == true)
     {
         if ("Goldfish".equals(getSelectAnimal1()))
         {
-            setTotalPrice(Receipt.totPrice + goldfish.getPrice()*getAntal1());
+            setTotalPrice(Receipt.totPrice + animals.goldfish.getPrice()*getAntal1());
             System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Receipt.totPrice);
-//            basket.addCos(goldfish);
+//            receipt.updateBasket("Goldfish");
+            basket.addCos(animals.goldfish);
         }
         PaneDisplay.button = false;
     }

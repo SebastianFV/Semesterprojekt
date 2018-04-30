@@ -11,8 +11,11 @@ package semesterprojekt;
  */
 public class Overview 
 {
-    public static void makeAnimals()
-    {
+//    public static void makeAnimals()
+//    {
+//        
+//        int y = 6;
+//        
 //     public Aquatic(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
         Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
         Aquatic whale = new Aquatic (5, 30, 500000, "Whale", 500, true, true, 50000000, true, 99999);
@@ -36,5 +39,5 @@ public class Overview
         Mammal horse = new Mammal (2, 13, 320, "horse", 400, false, false, 15, false, 100, "running on the fields");
         Mammal dog = new Mammal (2, 13, 50, "Dog", 50, false, true, 5, false, 30, "Playing fetch");
         Mammal tiger = new Mammal (2, 20, 1000, "Tiger", 200, false, true, 20, false, 99, "sleeping");
-    }
+//    }
 }    

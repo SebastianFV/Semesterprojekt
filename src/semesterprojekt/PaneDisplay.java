@@ -28,7 +28,7 @@ public class PaneDisplay extends javax.swing.JPanel {
         initComponents();
     }
     
-    public void setnavneAquatic(ArrayList<String> nn) {
+    public void setnavneAquatic(ArrayList<Animals> nn) {
         choice1.removeAll();
         choice1.addItem("Goldfish");
         choice1.addItem("Whale");

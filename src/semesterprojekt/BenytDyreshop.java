@@ -26,7 +26,7 @@ public class BenytDyreshop
         
         PaneDisplay aquaticDisplay = new PaneDisplay();
         Overview overview = new Overview();
-        Overview.makeAnimals();
+//        Overview.makeAnimals();
 
         GUI gui = new GUI();
         gui.initialize();
