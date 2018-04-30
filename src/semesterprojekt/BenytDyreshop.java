@@ -35,12 +35,7 @@ public class BenytDyreshop
 //        {
 //            
 //        }
-//        Carnivore tiger = new Carnivore(3, 30, "Tiger", 50, 10);
-//	while (tiger.getIsAlive())
-//	{
-//            System.out.println(tiger);
-//            tiger.birthday();
-//	}
+
     }
     
 }
