@@ -19,6 +19,8 @@ public class AquaticDisplay extends javax.swing.JPanel {
     Mammal mammal;
     Animals animals;
     int value;
+    int item;
+    String dyr;
     
 
     public AquaticDisplay() {
@@ -56,22 +58,28 @@ public class AquaticDisplay extends javax.swing.JPanel {
         choice1.addItem("Dinosaur");
         choice1.addItem("Dragon");
     }
+    
     public void getPrice (){
         animalPrice.setText("" + animals.getPrice());
     }
+    
     public void setAntal(){
-        Antal.setText("" + animals.getAntal());
+        Antal.setValue("" + animals.getAntal());
     }
+    
     public int getAntal(){
-        value = Integer.parseInt(Antal.getText());
+        value = (Integer) Antal.getValue();
         return value;
     }
+    
     public void tilføjTilKurv(){
         
     }
     
-    
-
+    public String getSelectAnimal(){
+        dyr = choice1.getSelectedItem();
+        return dyr;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -82,19 +90,12 @@ public class AquaticDisplay extends javax.swing.JPanel {
     private void initComponents() {
 
         choice1 = new java.awt.Choice();
-        Antal = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         animalPrice = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-
-        Antal.setText("0");
-        Antal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AntalActionPerformed(evt);
-            }
-        });
+        Antal = new javax.swing.JSpinner();
 
         jLabel1.setText("Antal");
 
@@ -110,6 +111,8 @@ public class AquaticDisplay extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        Antal.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -129,21 +132,21 @@ public class AquaticDisplay extends javax.swing.JPanel {
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(41, 41, 41)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Antal, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                            .addComponent(animalPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(animalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Antal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(31, 31, 31))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Antal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addComponent(Antal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(choice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(animalPrice)
                     .addComponent(jLabel2))
@@ -151,7 +154,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jButton1))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -159,13 +162,9 @@ public class AquaticDisplay extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void AntalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AntalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AntalActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Antal;
+    private javax.swing.JSpinner Antal;
     private javax.swing.JLabel animalPrice;
     private java.awt.Choice choice1;
     private javax.swing.JButton jButton1;

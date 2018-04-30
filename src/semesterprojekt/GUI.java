@@ -22,9 +22,38 @@ public class GUI extends javax.swing.JPanel
         aquaticDisplay2.sætnavneReptile(null);
         aquaticDisplay3.sætnavneMammal(null);
         aquaticDisplay4.sætnavneBird(null);
-        
     }
-    
+        public int getAntal1(){
+            return (Integer) aquaticDisplay1.getAntal();
+        }
+        public int getAntal2(){
+            return (Integer) aquaticDisplay2.getAntal();
+        }
+        public int getAntal3(){
+            return (Integer) aquaticDisplay3.getAntal();
+        }
+        public int getAntal4(){
+            return (Integer) aquaticDisplay4.getAntal();
+        }
+        
+        public String getSelectAnimal1(){
+            return aquaticDisplay1.getSelectAnimal();
+        }
+        public String getSelectAnimal2(){
+            return aquaticDisplay2.getSelectAnimal();
+        }
+        public String getSelectAnimal3(){
+            return aquaticDisplay3.getSelectAnimal();
+        }
+        public String getSelectAnimal4(){
+            return aquaticDisplay4.getSelectAnimal();
+        }
+        
+        public void printSelect(){
+            System.out.println(getAntal1());
+            System.out.println(getSelectAnimal1());
+            System.out.println(getSelectAnimal2());
+        }
     void initialize()
     {
         date.setText("Date: " + Display.getTime());
