@@ -72,25 +72,6 @@ public class AquaticDisplay extends javax.swing.JPanel {
         value = (Integer) Antal.getValue();
         return value;
     }
-<<<<<<< HEAD
-    public boolean buttonPress()
-    {
-        if (OKBotton.equals(true))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    public void tilføjTilKurv(){
-=======
-
-    public void tilfojTilKurv(){
->>>>>>> 426813a7ff489ee252cb88569ded7b4312bebe59
-        
-    }
     
     public String getSelectAnimal(){
         dyr = choice1.getSelectedItem();
