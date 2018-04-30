@@ -12,13 +12,7 @@ import javax.swing.DefaultListModel;
  * @author Nicho
  */
 public class Receipt extends javax.swing.JPanel 
-{
-//    Display display;
-//    GUI gui;
-    /**
-     * Creates new form Kvittering
-     */
-    
+{   
     int ID = 1000000;
     public static int totPrice;
     

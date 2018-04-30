@@ -6,7 +6,6 @@
 package semesterprojekt;
 
 import java.util.ArrayList;
-
 /**
  *
  * @author Squid
@@ -90,8 +89,9 @@ public void getAnimalx()
         if ("Goldfish".equals(getSelectAnimal1()))
         {
             setTotalPrice(Receipt.totPrice + animals.goldfish.getPrice()*getAntal1());
-            System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Receipt.totPrice);
+            System.out.println("You added a " + getSelectAnimal1() + ". New total price is:" + Receipt.totPrice);
 //            receipt.updateBasket("Goldfish");
+            
             basket.addCos(animals.goldfish);
         }
         PaneDisplay.button = false;
