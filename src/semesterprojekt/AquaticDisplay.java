@@ -76,7 +76,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
         if (OKBotton.equals(true))
         {
             return true;
-        }//hej
+        }
         else
         {
             return false;
