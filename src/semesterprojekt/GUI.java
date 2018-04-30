@@ -61,6 +61,18 @@ public class GUI extends javax.swing.JPanel
         kvittering1.initialize();
         
     }
+public void getAnimalx()
+{
+    if (aquaticDisplay1.buttonPress())
+    {
+        if (getSelectAnimal1() == "Goldfish")
+        {
+            
+        }
+    }
+   
+
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
