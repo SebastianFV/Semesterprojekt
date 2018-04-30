@@ -87,8 +87,8 @@ public void getAnimalx()
     {
         if ("Goldfish".equals(getSelectAnimal1()))
         {
-            setTotalPrice(Kvittering.totPrice + goldfish.getPrice()*getAntal1());
-            System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Kvittering.totPrice);
+            setTotalPrice(Receipt.totPrice + goldfish.getPrice()*getAntal1());
+            System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Receipt.totPrice);
 //            basket.addCos(goldfish);
         }
         PaneDisplay.button = false;
@@ -106,14 +106,14 @@ public void getAnimalx()
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        brugesIkke = new semesterprojekt.Kvittering();
+        brugesIkke = new semesterprojekt.Receipt();
         shopName = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         paneDisplay1 = new semesterprojekt.PaneDisplay();
         paneDisplay2 = new semesterprojekt.PaneDisplay();
         paneDisplay3 = new semesterprojekt.PaneDisplay();
         paneDisplay4 = new semesterprojekt.PaneDisplay();
-        kvittering1 = new semesterprojekt.Kvittering();
+        kvittering1 = new semesterprojekt.Receipt();
 
         jButton1.setText("jButton1");
 
@@ -155,11 +155,11 @@ public void getAnimalx()
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private semesterprojekt.Kvittering brugesIkke;
+    private semesterprojekt.Receipt brugesIkke;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private semesterprojekt.Kvittering kvittering1;
+    private semesterprojekt.Receipt kvittering1;
     private semesterprojekt.PaneDisplay paneDisplay1;
     private semesterprojekt.PaneDisplay paneDisplay2;
     private semesterprojekt.PaneDisplay paneDisplay3;

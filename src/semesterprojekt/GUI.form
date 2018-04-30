@@ -12,7 +12,7 @@
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
-    <Component class="semesterprojekt.Kvittering" name="brugesIkke">
+    <Component class="semesterprojekt.Receipt" name="brugesIkke">
     </Component>
   </NonVisualComponents>
   <AuxValues>
@@ -107,7 +107,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="semesterprojekt.Kvittering" name="kvittering1">
+    <Component class="semesterprojekt.Receipt" name="kvittering1">
     </Component>
   </SubComponents>
 </Form>

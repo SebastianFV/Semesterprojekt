@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Nicho
  */
-public class Kvittering extends javax.swing.JPanel 
+public class Receipt extends javax.swing.JPanel 
 {
 //    Display display;
 //    GUI gui;
@@ -20,7 +20,7 @@ public class Kvittering extends javax.swing.JPanel
     int ID = 1000000;
     public static int totPrice;
     
-    public Kvittering() 
+    public Receipt() 
     {
         initComponents();
         Dyreshop.setID();
@@ -30,7 +30,7 @@ public class Kvittering extends javax.swing.JPanel
     
     void initialize()
     {
-        System.out.println("semesterprojekt.Kvittering.initialize()");
+        System.out.println("semesterprojekt.Receipt.initialize()");
         costumerID.setText("No:" + Dyreshop.ID);
         totPrice = 0;
     }
