@@ -18,6 +18,8 @@ public class Kvittering extends javax.swing.JPanel
      */
     
     int ID = 1000000;
+    public static int totPrice;
+    
     public Kvittering() 
     {
         initComponents();
@@ -29,10 +31,25 @@ public class Kvittering extends javax.swing.JPanel
     void initialize()
     {
         System.out.println("semesterprojekt.Kvittering.initialize()");
-        date.setText("Date: " + Dyreshop.getTime());
         costumerID.setText("No:" + Dyreshop.ID);
+        totPrice = 0;
+    }
+    
+    public void receitRefresh()
+    {
+        date.setText("Date: " + Dyreshop.getTime());
     }
 
+    public void setTotalPrice(int totPrice)
+    {
+        totalPrice.setText("Total price:" + totPrice);
+    }
+    
+//    public static void getTotalPrice()
+//    {
+//        totalPrice
+//    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -180,7 +197,7 @@ public class Kvittering extends javax.swing.JPanel
 
         inDkk.setText("In DKK");
 
-        totalPrice.setText("Total price");
+        totalPrice.setText("Total price:");
 
         thanksForVisiting.setText("Thansk for visiting, see you soon");
 

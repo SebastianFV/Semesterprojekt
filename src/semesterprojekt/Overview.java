@@ -13,14 +13,15 @@ public class Overview
 {
     public static void makeAnimals()
     {
-        Aquatic Goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
-        Aquatic Whale = new Aquatic (5, 30, 500000, "Whale", 500, true, true, 50000000, true, 99999);
-        Aquatic Shark = new Aquatic (3, 30, 999999, "Shark", 5000, false, true, 500000, true, 9999);
-        Aquatic Seacucumber = new Aquatic (1, 3, 50, "Sea Cucumber", 10, true, false, 50, true, 5);
-        Aquatic Dolphin = new Aquatic (3, 30, 999999, "Dolphin", 5000, false, true, 500000, false, 9999);
+//     public Aquatic(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
+        Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
+        Aquatic whale = new Aquatic (5, 30, 500000, "Whale", 500, true, true, 50000000, true, 99999);
+        Aquatic shark = new Aquatic (3, 30, 999999, "Shark", 5000, false, true, 500000, true, 9999);
+        Aquatic seacucumber = new Aquatic (1, 3, 50, "Sea Cucumber", 10, true, false, 50, true, 5);
+        Aquatic dolphin = new Aquatic (3, 30, 999999, "Dolphin", 5000, false, true, 500000, false, 9999);
 
         Bird dove = new Bird (1, 5, 100, "Dove", 50, true, true, 500, false, 500);
-        Bird Pigeon = new Bird (1, 5, 100, "Pigeon", 50, true, true, 500, false, 500);
+        Bird pigeon = new Bird (1, 5, 100, "Pigeon", 50, true, true, 500, false, 500);
         Bird smallBird = new Bird (1, 5, 100, "small", 50, true, true, 500, false, 500);
         Bird bigBird = new Bird (1, 10, 200, "large", 100, false, true, 50000, true, 1000);
 

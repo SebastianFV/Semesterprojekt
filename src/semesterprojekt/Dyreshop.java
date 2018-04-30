@@ -19,6 +19,11 @@ public class Dyreshop
     Mammal mammal;
     static int ID = 10000;
     
+//    aquaticDisplay1.sætnavneAquatic(null);
+//    aquaticDisplay2.sætnavneReptile(null);
+//    aquaticDisplay3.sætnavneMammal(null);
+//    aquaticDisplay4.sætnavneBird(null);
+    
     public static String getTime()
     {
         Date dato = new Date();
@@ -35,6 +40,14 @@ public class Dyreshop
     {
         ID = ID++;
     }
+    
+//    public void calcPrice()
+//    {
+//        if (getSelectAnimal1() == "Goldfish")
+//        {
+//
+//        }
+//    }
     
     
     

@@ -14,7 +14,7 @@ public class Animals
     private int yearsOld;
     private int expectedLifeAge;
     private int adultSize;
-    private int price;
+    private static int price;
     private int antal;
     private String species;
     private boolean isAlive;
@@ -44,7 +44,7 @@ public class Animals
         this.adultSize = adultSize;
     }
 
-    public int getPrice() {
+    public static int getPrice() {
         return price;
     }
 

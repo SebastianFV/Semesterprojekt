@@ -20,6 +20,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
     Animals animals;
     int value;
     int item;
+    public static boolean button;
     String dyr;
     
 
@@ -71,17 +72,10 @@ public class AquaticDisplay extends javax.swing.JPanel {
         value = (Integer) Antal.getValue();
         return value;
     }
-    public boolean buttonPress()
-    {
-        if (OKBotton.equals(true))
-        {
-            return true;
-        }//hej
-        else
-        {
-            return false;
-        }
-    }
+//    public boolean buttonPress()
+//    {
+//
+//    }
     public void tilføjTilKurv(){
         
     }
@@ -169,7 +163,8 @@ public class AquaticDisplay extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OKBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKBottonActionPerformed
-        // TODO add your handling code here:
+
+            button = true;
     }//GEN-LAST:event_OKBottonActionPerformed
 
 

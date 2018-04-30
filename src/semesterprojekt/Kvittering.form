@@ -364,7 +364,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="totalPrice">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Total price"/>
+            <Property name="text" type="java.lang.String" value="Total price:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator6">
