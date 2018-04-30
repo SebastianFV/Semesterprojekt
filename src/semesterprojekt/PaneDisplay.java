@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Squid
  */
-public class AquaticDisplay extends javax.swing.JPanel {
+public class PaneDisplay extends javax.swing.JPanel {
     
     Reptile reptile;
     Aquatic aquatic;
@@ -24,7 +24,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
     String dyr;
     
 
-    public AquaticDisplay() {
+    public PaneDisplay() {
         initComponents();
     }
     
@@ -71,6 +71,10 @@ public class AquaticDisplay extends javax.swing.JPanel {
     public int getAntal(){
         value = (Integer) Antal.getValue();
         return value;
+    }
+
+    public void tilfojTilKurv(){
+        
     }
     
     public String getSelectAnimal(){

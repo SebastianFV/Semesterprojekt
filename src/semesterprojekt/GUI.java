@@ -25,22 +25,22 @@ public class GUI extends javax.swing.JPanel
         aquatic = new ArrayList<>();
         aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
         initComponents();
-        aquaticDisplay1.setnavneAquatic(null);
-        aquaticDisplay2.setnavneReptile(null);
-        aquaticDisplay3.setnavneMammal(null);
-        aquaticDisplay4.setnavneBird(null);
+        paneDisplay1.setnavneAquatic(null);
+        paneDisplay2.setnavneReptile(null);
+        paneDisplay3.setnavneMammal(null);
+        paneDisplay4.setnavneBird(null);
     }
         public int getAntal1(){
-            return (Integer) aquaticDisplay1.getAntal();
+            return (Integer) paneDisplay1.getAntal();
         }
         public int getAntal2(){
-            return (Integer) aquaticDisplay2.getAntal();
+            return (Integer) paneDisplay2.getAntal();
         }
         public int getAntal3(){
-            return (Integer) aquaticDisplay3.getAntal();
+            return (Integer) paneDisplay3.getAntal();
         }
         public int getAntal4(){
-            return (Integer) aquaticDisplay4.getAntal();
+            return (Integer) paneDisplay4.getAntal();
         }
         
         public void setTotalPrice(int totPrice)
@@ -49,16 +49,16 @@ public class GUI extends javax.swing.JPanel
         }
         
         public String getSelectAnimal1(){
-            return aquaticDisplay1.getSelectAnimal();
+            return paneDisplay1.getSelectAnimal();
         }
         public String getSelectAnimal2(){
-            return aquaticDisplay2.getSelectAnimal();
+            return paneDisplay2.getSelectAnimal();
         }
         public String getSelectAnimal3(){
-            return aquaticDisplay3.getSelectAnimal();
+            return paneDisplay3.getSelectAnimal();
         }
         public String getSelectAnimal4(){
-            return aquaticDisplay4.getSelectAnimal();
+            return paneDisplay4.getSelectAnimal();
         }
         
         public void printSelect(){
@@ -83,43 +83,16 @@ public void getAnimalx()
 {
 //    Overview.makeAnimals();
     Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
-    if (AquaticDisplay.button == true)
+    if (PaneDisplay.button == true)
     {
         if ("Goldfish".equals(getSelectAnimal1()))
         {
             setTotalPrice(Kvittering.totPrice + goldfish.getPrice()*getAntal1());
             System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Kvittering.totPrice);
-            basket.addCos(goldfish);
+//            basket.addCos(goldfish);
         }
-        AquaticDisplay.button = false;
+        PaneDisplay.button = false;
     }
-}
-
-public static void makeAnimals()
-{
-//     public Aquatic(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
-    Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
-    Aquatic whale = new Aquatic (5, 30, 500000, "Whale", 500, true, true, 50000000, true, 99999);
-    Aquatic shark = new Aquatic (3, 30, 999999, "Shark", 5000, false, true, 500000, true, 9999);
-    Aquatic seacucumber = new Aquatic (1, 3, 50, "Sea Cucumber", 10, true, false, 50, true, 5);
-    Aquatic dolphin = new Aquatic (3, 30, 999999, "Dolphin", 5000, false, true, 500000, false, 9999);
-
-    Bird dove = new Bird (1, 5, 100, "Dove", 50, true, true, 500, false, 500);
-    Bird pigeon = new Bird (1, 5, 100, "Pigeon", 50, true, true, 500, false, 500);
-    Bird smallBird = new Bird (1, 5, 100, "small", 50, true, true, 500, false, 500);
-    Bird bigBird = new Bird (1, 10, 200, "large", 100, false, true, 50000, true, 1000);
-
-    Reptile snake = new Reptile (2, 50, 500, "Snake", 100, false, true, 500, true, 500);
-    Reptile turtle = new Reptile (7, 75, 1000, "Turtle", 75, true, true, 500, true, 100);
-    Reptile salamander = new Reptile (2, 30, 500, "Salamander", 50, false, true, 500, true, 200);
-    Reptile dinosaur = new Reptile (5000000, -4900100, 999999, "Dinosaur", 5000, false, true, 999999, true, 99999);
-    Reptile dragon = new Reptile (3000, 10000, 999999, "Dragon", 999999, false, true, 9999999, true, 99999);
-
-    Mammal ape = new Mammal (2, 13, 50, "Ape", 50, true, true, 5, false, 50, "Likes to climb");
-    Mammal elephant = new Mammal (2, 23, 500, "Elephant", 500, true, false, 50, false, 999, "Eating");
-    Mammal horse = new Mammal (2, 13, 320, "horse", 400, false, false, 15, false, 100, "running on the fields");
-    Mammal dog = new Mammal (2, 13, 50, "Dog", 50, false, true, 5, false, 30, "Playing fetch");
-    Mammal tiger = new Mammal (2, 20, 1000, "Tiger", 200, false, true, 20, false, 99, "sleeping");
 }
 
     /**
@@ -136,10 +109,10 @@ public static void makeAnimals()
         brugesIkke = new semesterprojekt.Kvittering();
         shopName = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        aquaticDisplay1 = new semesterprojekt.AquaticDisplay();
-        aquaticDisplay2 = new semesterprojekt.AquaticDisplay();
-        aquaticDisplay3 = new semesterprojekt.AquaticDisplay();
-        aquaticDisplay4 = new semesterprojekt.AquaticDisplay();
+        paneDisplay1 = new semesterprojekt.PaneDisplay();
+        paneDisplay2 = new semesterprojekt.PaneDisplay();
+        paneDisplay3 = new semesterprojekt.PaneDisplay();
+        paneDisplay4 = new semesterprojekt.PaneDisplay();
         kvittering1 = new semesterprojekt.Kvittering();
 
         jButton1.setText("jButton1");
@@ -148,10 +121,10 @@ public static void makeAnimals()
 
         shopName.setText("Pet Shop");
 
-        jTabbedPane2.addTab("Aquatic", aquaticDisplay1);
-        jTabbedPane2.addTab("Reptile", aquaticDisplay2);
-        jTabbedPane2.addTab("Mammal", aquaticDisplay3);
-        jTabbedPane2.addTab("Bird", aquaticDisplay4);
+        jTabbedPane2.addTab("Aquatic", paneDisplay1);
+        jTabbedPane2.addTab("Reptile", paneDisplay2);
+        jTabbedPane2.addTab("Mammal", paneDisplay3);
+        jTabbedPane2.addTab("Bird", paneDisplay4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -182,15 +155,15 @@ public static void makeAnimals()
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private semesterprojekt.AquaticDisplay aquaticDisplay1;
-    private semesterprojekt.AquaticDisplay aquaticDisplay2;
-    private semesterprojekt.AquaticDisplay aquaticDisplay3;
-    private semesterprojekt.AquaticDisplay aquaticDisplay4;
     private semesterprojekt.Kvittering brugesIkke;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private semesterprojekt.Kvittering kvittering1;
+    private semesterprojekt.PaneDisplay paneDisplay1;
+    private semesterprojekt.PaneDisplay paneDisplay2;
+    private semesterprojekt.PaneDisplay paneDisplay3;
+    private semesterprojekt.PaneDisplay paneDisplay4;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
 }

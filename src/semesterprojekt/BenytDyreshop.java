@@ -24,7 +24,7 @@ public class BenytDyreshop
     public static void main(String[] args) throws InterruptedException 
     {
         
-        AquaticDisplay aquaticDisplay = new AquaticDisplay();
+        PaneDisplay aquaticDisplay = new PaneDisplay();
         Overview overview = new Overview();
         Overview.makeAnimals();
 

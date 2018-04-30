@@ -87,7 +87,7 @@ public class Kvittering extends javax.swing.JPanel
         amount2 = new javax.swing.JLabel();
         price2 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
-        total = new javax.swing.JLabel();
+        totalAntalDyr = new javax.swing.JLabel();
         inDkk = new javax.swing.JLabel();
         totalPrice = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
@@ -194,7 +194,7 @@ public class Kvittering extends javax.swing.JPanel
 
         price2.setText("Price");
 
-        total.setText("Total");
+        totalAntalDyr.setText("Total");
 
         inDkk.setText("In DKK");
 
@@ -229,7 +229,7 @@ public class Kvittering extends javax.swing.JPanel
                             .addGap(22, 22, 22)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(total)
+                                    .addComponent(totalAntalDyr)
                                     .addGap(68, 68, 68)
                                     .addComponent(inDkk)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -296,7 +296,7 @@ public class Kvittering extends javax.swing.JPanel
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(total)
+                    .addComponent(totalAntalDyr)
                     .addComponent(inDkk)
                     .addComponent(totalPrice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -354,7 +354,7 @@ public class Kvittering extends javax.swing.JPanel
     private javax.swing.JLabel price2;
     private javax.swing.JLabel thanksForVisiting;
     private javax.swing.JLabel tlf;
-    private javax.swing.JLabel total;
+    private javax.swing.JLabel totalAntalDyr;
     private javax.swing.JLabel totalPrice;
     // End of variables declaration//GEN-END:variables
 }
