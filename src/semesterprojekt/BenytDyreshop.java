@@ -12,6 +12,11 @@ import javax.swing.JFrame;
  */
 public class BenytDyreshop 
 {
+    Reptile reptile;
+    Aquatic aquatic;
+    Bird bird;
+    Mammal mammal;
+    Animals animals;
     static int finalPrice;
     /**
      * @param args the command line arguments
@@ -21,6 +26,7 @@ public class BenytDyreshop
         
         AquaticDisplay aquaticDisplay = new AquaticDisplay();
         Overview overview = new Overview();
+        Overview.makeAnimals();
         GUI gui = new GUI();
         gui.initialize();
         JFrame vindue = new JFrame("Pet shop");
@@ -32,8 +38,12 @@ public class BenytDyreshop
         
         while (gui.isShowing())
         {
+            System.out.println();
+            System.out.println();
               Thread.sleep(1000);
+              gui.refresh();
               gui.printSelect();
+//              gui.getAnimalx();
         }
     }
     
