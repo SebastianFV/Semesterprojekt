@@ -43,7 +43,6 @@ public class BenytDyreshop
               Thread.sleep(1000);
               gui.refresh();
               gui.printSelect();
-//              gui.getAnimalx();
         }
     }
     

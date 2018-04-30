@@ -72,7 +72,6 @@ public class AquaticDisplay extends javax.swing.JPanel {
         value = (Integer) Antal.getValue();
         return value;
     }
-<<<<<<< HEAD
     public boolean buttonPress()
     {
         if (OKBotton.equals(true))
@@ -84,12 +83,6 @@ public class AquaticDisplay extends javax.swing.JPanel {
             return false;
         }
     }
-=======
-//    public boolean buttonPress()
-//    {
-//
-//    }
->>>>>>> 73caca37530525cfe4161963e8ef8611d0e5ff36
     public void tilføjTilKurv(){
         
     }

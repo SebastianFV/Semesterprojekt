@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package semesterprojekt;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Squid
@@ -17,6 +20,9 @@ public class GUI extends javax.swing.JPanel
      */
     public GUI() 
     {
+        ArrayList<Aquatic> aquatic;
+        aquatic = new ArrayList<>();
+        aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
         initComponents();
         aquaticDisplay1.sætnavneAquatic(null);
         aquaticDisplay2.sætnavneReptile(null);
@@ -74,6 +80,7 @@ public class GUI extends javax.swing.JPanel
     }
 public void getAnimalx()
 {
+//    Overview.makeAnimals();
     Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
     if (AquaticDisplay.button == true)
     {
