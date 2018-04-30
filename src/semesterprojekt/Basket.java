@@ -12,16 +12,20 @@ import java.util.ArrayList;
  * @author Nicho
  */
 public class Basket {
+
+    void addCos(Aquatic goldfish) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public class basket 
 {
-    public ArrayList<basket> kunder;
+    public ArrayList<Animals> kunder;
     
     public basket()
     {
-        kunder = new ArrayList<basket>();
+        kunder = new ArrayList<Animals>();
     }
     
-    public void addCos(basket cos)
+    public void addCos(Animals cos)
     {
         kunder.add(cos);
     }
@@ -42,7 +46,7 @@ public class Basket {
 //    }
     public int getPrice()
     {
-        for(basket cos : kunder)
+        for(Animals cos : kunder)
         {
             return cos.getPrice();
         }
@@ -50,7 +54,7 @@ public class Basket {
     }
     public int getAntal()
     {
-        for(basket cos : kunder)
+        for(Animals cos : kunder)
         {
             return cos.getAntal();
         }
@@ -58,7 +62,7 @@ public class Basket {
     }
     public int samletPris()
     {
-        for (basket cos : kunder)
+        for (Animals cos : kunder)
         {
             return cos.getAntal() * cos.getPrice();
         }

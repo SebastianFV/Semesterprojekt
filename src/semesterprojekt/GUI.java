@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class GUI extends javax.swing.JPanel 
 {
+      Basket basket = new Basket();
 //    Display display;
 
     /**
@@ -24,10 +25,10 @@ public class GUI extends javax.swing.JPanel
         aquatic = new ArrayList<>();
         aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
         initComponents();
-        aquaticDisplay1.sætnavneAquatic(null);
-        aquaticDisplay2.sætnavneReptile(null);
-        aquaticDisplay3.sætnavneMammal(null);
-        aquaticDisplay4.sætnavneBird(null);
+        aquaticDisplay1.setnavneAquatic(null);
+        aquaticDisplay2.setnavneReptile(null);
+        aquaticDisplay3.setnavneMammal(null);
+        aquaticDisplay4.setnavneBird(null);
     }
         public int getAntal1(){
             return (Integer) aquaticDisplay1.getAntal();
@@ -87,9 +88,9 @@ public void getAnimalx()
         if ("Goldfish".equals(getSelectAnimal1()))
         {
             setTotalPrice(Kvittering.totPrice + goldfish.getPrice()*getAntal1());
-            System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Kvittering.totPrice+goldfish.getPrice()*getAntal1());
+            System.out.println("You added" + getSelectAnimal1() + ". New total price is:" + Kvittering.totPrice);
+            basket.addCos(goldfish);
         }
-        
         AquaticDisplay.button = false;
     }
 }
