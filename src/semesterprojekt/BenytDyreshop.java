@@ -32,25 +32,11 @@ public class BenytDyreshop
         vindue.setVisible(true);
         System.out.println("Hello world");
         
-<<<<<<< HEAD
-//        while (true)
-//        {
-//            
-//        }
-
-=======
         while (gui.isShowing())
         {
               Thread.sleep(1000);
               gui.printSelect();
         }
-//        Carnivore tiger = new Carnivore(3, 30, "Tiger", 50, 10);
-//	while (tiger.getIsAlive())
-//	{
-//            System.out.println(tiger);
-//            tiger.birthday();
-//	}
->>>>>>> 895c637fca3777eb9a117833cd0d3c685b4ad4f5
     }
     
 }
