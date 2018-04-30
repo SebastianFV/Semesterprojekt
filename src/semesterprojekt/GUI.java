@@ -70,8 +70,6 @@ public void getAnimalx()
             
         }
     }
-   
-
 }
 
     /**

@@ -71,7 +71,17 @@ public class AquaticDisplay extends javax.swing.JPanel {
         value = (Integer) Antal.getValue();
         return value;
     }
-    
+    public boolean buttonPress()
+    {
+        if (OKBotton.equals(true))
+        {
+            return true;
+        }//hej
+        else
+        {
+            return false;
+        }
+    }
     public void tilføjTilKurv(){
         
     }
@@ -94,7 +104,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         animalPrice = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        OKBotton = new javax.swing.JButton();
         Antal = new javax.swing.JSpinner();
 
         jLabel1.setText("Antal");
@@ -105,14 +115,14 @@ public class AquaticDisplay extends javax.swing.JPanel {
 
         jLabel4.setText("Tilføj til kurv");
 
-        jButton1.setText("OK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        OKBotton.setText("OK");
+        OKBotton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                OKBottonActionPerformed(evt);
             }
         });
 
-        Antal.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        Antal.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -126,7 +136,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1))
+                        .addComponent(OKBotton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,21 +163,21 @@ public class AquaticDisplay extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton1))
+                    .addComponent(OKBotton))
                 .addContainerGap(185, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void OKBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKBottonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_OKBottonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSpinner Antal;
+    private javax.swing.JButton OKBotton;
     private javax.swing.JLabel animalPrice;
     private java.awt.Choice choice1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
