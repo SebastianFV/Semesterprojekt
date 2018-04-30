@@ -27,6 +27,7 @@ public class BenytDyreshop
         AquaticDisplay aquaticDisplay = new AquaticDisplay();
         Overview overview = new Overview();
         Overview.makeAnimals();
+
         GUI gui = new GUI();
         gui.initialize();
         JFrame vindue = new JFrame("Pet shop");

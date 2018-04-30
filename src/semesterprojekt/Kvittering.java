@@ -42,6 +42,7 @@ public class Kvittering extends javax.swing.JPanel
 
     public void setTotalPrice(int totPrice)
     {
+        this.totPrice = totPrice;
         totalPrice.setText("Total price:" + totPrice);
     }
     

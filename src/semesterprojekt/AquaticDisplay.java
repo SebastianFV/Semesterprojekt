@@ -28,7 +28,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
         initComponents();
     }
     
-    public void sætnavneAquatic(ArrayList<String> nn) {
+    public void setnavneAquatic(ArrayList<String> nn) {
         choice1.removeAll();
         choice1.addItem("Goldfish");
         choice1.addItem("Whale");
@@ -36,14 +36,14 @@ public class AquaticDisplay extends javax.swing.JPanel {
         choice1.addItem("Dolphin");
         choice1.addItem("Sea cucumber");
     }
-    public void sætnavneBird(ArrayList<String> nn) {
+    public void setnavneBird(ArrayList<String> nn) {
         choice1.removeAll();
         choice1.addItem("Dove");
         choice1.addItem("Pidgeon");
         choice1.addItem("Small bird");
         choice1.addItem("Big bird");
     }
-    public void sætnavneMammal(ArrayList<String> nn) {
+    public void setnavneMammal(ArrayList<String> nn) {
         choice1.removeAll();
         choice1.addItem("Ape");
         choice1.addItem("Elephant");
@@ -51,7 +51,7 @@ public class AquaticDisplay extends javax.swing.JPanel {
         choice1.addItem("Dog");
         choice1.addItem("Tiger");
     }
-    public void sætnavneReptile(ArrayList<String> nn) {
+    public void setnavneReptile(ArrayList<String> nn) {
         choice1.removeAll();
         choice1.addItem("Snake");
         choice1.addItem("Turtle");
@@ -72,25 +72,8 @@ public class AquaticDisplay extends javax.swing.JPanel {
         value = (Integer) Antal.getValue();
         return value;
     }
-<<<<<<< HEAD
-    public boolean buttonPress()
-    {
-        if (OKBotton.equals(true))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-=======
-//    public boolean buttonPress()
-//    {
-//
-//    }
->>>>>>> 73caca37530525cfe4161963e8ef8611d0e5ff36
-    public void tilføjTilKurv(){
+
+    public void tilfojTilKurv(){
         
     }
     
