@@ -90,6 +90,7 @@ public class PaneDisplay extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         choice1 = new java.awt.Choice();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -97,6 +98,8 @@ public class PaneDisplay extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         OKBotton = new javax.swing.JButton();
         Antal = new javax.swing.JSpinner();
+
+        jLabel3.setText("jLabel3");
 
         jLabel1.setText("Antal");
 
@@ -172,6 +175,7 @@ public class PaneDisplay extends javax.swing.JPanel {
     private java.awt.Choice choice1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

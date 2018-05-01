@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package semesterprojekt;
-
+import java.util.ArrayList;
 import javax.swing.JFrame;
 /**
  *
@@ -12,6 +12,8 @@ import javax.swing.JFrame;
  */
 public class BenytDyreshop 
 {
+
+
     Reptile reptile;
     Aquatic aquatic;
     Bird bird;
@@ -27,7 +29,6 @@ public class BenytDyreshop
         PaneDisplay aquaticDisplay = new PaneDisplay();
         Overview overview = new Overview();
         Overview.makeAnimals();
-
         GUI gui = new GUI();
         gui.initialize();
         JFrame vindue = new JFrame("Pet shop");
@@ -41,9 +42,9 @@ public class BenytDyreshop
         {
             System.out.println();
             System.out.println();
-              Thread.sleep(1000);
-              gui.refresh();
-              gui.printSelect();
+            Thread.sleep(1000);
+            gui.refresh();
+            gui.printSelect();
         }
     }
     

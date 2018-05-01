@@ -80,12 +80,6 @@ public class Receipt extends javax.swing.JPanel
         jSeparator2 = new javax.swing.JSeparator();
         costumerID = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        item1 = new javax.swing.JLabel();
-        amount1 = new javax.swing.JLabel();
-        price1 = new javax.swing.JLabel();
-        item2 = new javax.swing.JLabel();
-        amount2 = new javax.swing.JLabel();
-        price2 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         totalAntalDyr = new javax.swing.JLabel();
         inDkk = new javax.swing.JLabel();
@@ -93,6 +87,7 @@ public class Receipt extends javax.swing.JPanel
         jSeparator6 = new javax.swing.JSeparator();
         thanksForVisiting = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
+        itemList = new java.awt.List();
 
         Petshop2.setText("Pet Shop");
 
@@ -182,18 +177,6 @@ public class Receipt extends javax.swing.JPanel
 
         costumerID.setText("No:");
 
-        item1.setText("Item");
-
-        amount1.setText("Amount");
-
-        price1.setText("Price");
-
-        item2.setText("item");
-
-        amount2.setText("Amount");
-
-        price2.setText("Price");
-
         totalAntalDyr.setText("Total");
 
         inDkk.setText("In DKK");
@@ -225,6 +208,9 @@ public class Receipt extends javax.swing.JPanel
                                         .addGap(11, 11, 11)
                                         .addComponent(Istedgade))
                                     .addComponent(adresse, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -232,7 +218,7 @@ public class Receipt extends javax.swing.JPanel
                                     .addComponent(totalAntalDyr)
                                     .addGap(68, 68, 68)
                                     .addComponent(inDkk)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
                                     .addComponent(totalPrice))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(date)
@@ -240,22 +226,8 @@ public class Receipt extends javax.swing.JPanel
                                     .addComponent(costumerID))
                                 .addComponent(jSeparator4)
                                 .addComponent(jSeparator2)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(item1)
-                                        .addComponent(item2))
-                                    .addGap(71, 71, 71)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(amount1)
-                                        .addComponent(amount2))
-                                    .addGap(180, 199, Short.MAX_VALUE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(price2)
-                                        .addComponent(price1)))
-                                .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(itemList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
                         .addComponent(thanksForVisiting)))
@@ -282,16 +254,8 @@ public class Receipt extends javax.swing.JPanel
                     .addComponent(date))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(item1)
-                    .addComponent(amount1)
-                    .addComponent(price1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(item2)
-                    .addComponent(amount2)
-                    .addComponent(price2))
+                .addGap(2, 2, 2)
+                .addComponent(itemList, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -328,13 +292,10 @@ public class Receipt extends javax.swing.JPanel
     private javax.swing.JLabel Petshop1;
     private javax.swing.JLabel Petshop2;
     private javax.swing.JLabel adresse;
-    private javax.swing.JLabel amount1;
-    private javax.swing.JLabel amount2;
     private javax.swing.JLabel costumerID;
     private javax.swing.JLabel date;
     private javax.swing.JLabel inDkk;
-    private javax.swing.JLabel item1;
-    private javax.swing.JLabel item2;
+    private java.awt.List itemList;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -350,8 +311,6 @@ public class Receipt extends javax.swing.JPanel
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JLabel price1;
-    private javax.swing.JLabel price2;
     private javax.swing.JLabel thanksForVisiting;
     private javax.swing.JLabel tlf;
     private javax.swing.JLabel totalAntalDyr;

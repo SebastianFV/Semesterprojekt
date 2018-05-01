@@ -184,6 +184,10 @@
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jSeparator6" min="-2" pref="385" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -191,7 +195,7 @@
                                       <Component id="totalAntalDyr" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                       <Component id="inDkk" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="168" max="32767" attributes="0"/>
                                       <Component id="totalPrice" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -201,28 +205,9 @@
                                   </Group>
                                   <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="item1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="item2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="amount1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="amount2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="180" pref="199" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="price2" min="-2" max="-2" attributes="0"/>
-                                          <Component id="price1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
                                   <Component id="jSeparator5" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="itemList" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jSeparator6" min="-2" pref="385" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -256,18 +241,8 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jSeparator4" min="-2" pref="11" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="item1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="amount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="price1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="item2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="amount2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="price2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                  <Component id="itemList" min="-2" pref="176" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -320,36 +295,6 @@
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator4">
         </Component>
-        <Component class="javax.swing.JLabel" name="item1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Item"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="amount1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Amount"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="price1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Price"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="item2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="item"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="amount2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Amount"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="price2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Price"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator5">
         </Component>
         <Component class="javax.swing.JLabel" name="totalAntalDyr">
@@ -378,6 +323,8 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Date: "/>
           </Properties>
+        </Component>
+        <Component class="java.awt.List" name="itemList">
         </Component>
       </SubComponents>
     </Container>
