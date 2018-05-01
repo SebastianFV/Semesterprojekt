@@ -12,8 +12,6 @@
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
-    <Component class="semesterprojekt.Receipt" name="brugesIkke">
-    </Component>
   </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -33,16 +31,10 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTabbedPane2" pref="443" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="shopName" min="-2" max="-2" attributes="0"/>
-                          <Component id="kvittering1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="shopName" min="-2" max="-2" attributes="0"/>
+                  <Component id="receipt1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Pane" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -52,9 +44,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="shopName" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane2" pref="159" max="32767" attributes="0"/>
+              <Component id="Pane" min="-2" pref="174" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="receipt1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="kvittering1" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -65,7 +58,7 @@
         <Property name="text" type="java.lang.String" value="Pet Shop"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+    <Container class="javax.swing.JTabbedPane" name="Pane">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -107,7 +100,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="semesterprojekt.Receipt" name="kvittering1">
+    <Component class="semesterprojekt.Receipt" name="receipt1">
     </Component>
   </SubComponents>
 </Form>

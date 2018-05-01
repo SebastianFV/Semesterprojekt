@@ -16,35 +16,48 @@ public class BenytDyreshop
     Aquatic aquatic;
     Bird bird;
     Mammal mammal;
-    Animals animals;
+    Animal animals;
     static int finalPrice;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException 
     {
-        
-        PaneDisplay aquaticDisplay = new PaneDisplay();
+        Receipt receipt;
+        PaneDisplay paneDisplay = new PaneDisplay();
         Overview overview = new Overview();
 //        Overview.makeAnimals();
-
+        Dyreshop dyreshop = new Dyreshop();
         GUI gui = new GUI();
         gui.initialize();
         JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        vindue.setSize(700, 700);
+        vindue.setSize(550, 600);
         vindue.setVisible(true);
         System.out.println("Hello world");
-        
+        overview.makeTestData();
         while (gui.isShowing())
         {
-            System.out.println();
-            System.out.println();
-              Thread.sleep(1000);
-              gui.refresh();
-              gui.printSelect();
+            if (PaneDisplay.button == true)
+            {
+                switch(gui.selectedPane())
+                {
+                    case 0:
+                    {
+                        gui.updateTotal(overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
+                        System.out.println(gui.getSelectAnimal1());
+                    }
+                }
+            }
+            else
+            {
+                System.out.println("nothing");
+                
+            }
         }
     }
-    
+//              Thread.sleep(1000);
+//              gui.refresh();
+//              gui.printSelect();
 }

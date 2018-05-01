@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Reptile extends Animals
+public class Reptile extends Animal
 {
 
     public int getTerrariumSize() {

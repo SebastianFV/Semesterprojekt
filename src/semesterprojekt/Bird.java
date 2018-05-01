@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Bird extends Animals
+public class Bird extends Animal
 {
     int birdCage;
     public Bird(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int birdCage, boolean isALoner, int eatingHabbits)

@@ -13,14 +13,14 @@ import java.util.ArrayList;
  */
 public class Basket {
 
-    public ArrayList<Animals> kunder;
+    public ArrayList<Animal> kunder;
     
     public Basket()
     {
-        kunder = new ArrayList<Animals>();
+        kunder = new ArrayList<Animal>();
     }
     
-    public void addCos(Animals cos)
+    public void addCos(Animal cos)
     {
         kunder.add(cos);
     }
@@ -41,7 +41,7 @@ public class Basket {
 //    }
     public int getPrice()
     {
-        for(Animals cos : kunder)
+        for(Animal cos : kunder)
         {
             return cos.getPrice();
         }
@@ -49,7 +49,7 @@ public class Basket {
     }
     public int getAntal()
     {
-        for(Animals cos : kunder)
+        for(Animal cos : kunder)
         {
             return cos.getAntal();
         }
@@ -57,7 +57,7 @@ public class Basket {
     }
     public int samletPris()
     {
-        for (Animals cos : kunder)
+        for (Animal cos : kunder)
         {
             return cos.getAntal() * cos.getPrice();
         }

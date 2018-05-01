@@ -12,9 +12,10 @@ import java.util.ArrayList;
  */
 public class GUI extends javax.swing.JPanel 
 {
-    Receipt receipt;
+    Overview overview;
+    Receipt receipt = new Receipt();
     Basket basket = new Basket();
-    Overview animals = new Overview();
+    Animal animal;
 
 //    Display display;
 
@@ -47,20 +48,34 @@ public class GUI extends javax.swing.JPanel
         
         public void setTotalPrice(int totPrice)
         {
-            kvittering1.setTotalPrice(totPrice);
+            receipt1.setTotalPrice(totPrice);
         }
         
         public String getSelectAnimal1(){
             return paneDisplay1.getSelectAnimal();
         }
+        public int getSelectIndex1(){
+            return paneDisplay1.getSelectedIndex();
+        }
+        
         public String getSelectAnimal2(){
             return paneDisplay2.getSelectAnimal();
         }
+        public int getSelectIndex2(){
+            return paneDisplay2.getSelectedIndex();
+        }
+        
         public String getSelectAnimal3(){
             return paneDisplay3.getSelectAnimal();
         }
+        public int getSelectIndex3(){
+            return paneDisplay3.getSelectedIndex();
+        }
         public String getSelectAnimal4(){
             return paneDisplay4.getSelectAnimal();
+        }
+        public int getSelectIndex4(){
+            return paneDisplay4.getSelectedIndex();
         }
         
         public void printSelect(){
@@ -71,32 +86,26 @@ public class GUI extends javax.swing.JPanel
     void initialize()
     {
 //        date.setText("Date: " + Dyreshop.getTime());
-        System.out.println("Initialize "+kvittering1);
-        kvittering1.initialize();
+        System.out.println("Initialize "+receipt1);
+        receipt1.initialize();
     }
     
     public void refresh()
     {
-        kvittering1.receitRefresh();
-        getAnimalx();
+        receipt1.receitRefresh();
     }
-public void getAnimalx()
-{
-//    Overview.makeAnimals();
-//    Aquatic goldfish = new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5);
-    if (PaneDisplay.button == true)
-    {
-        if ("Goldfish".equals(getSelectAnimal1()))
-        {
-            setTotalPrice(Receipt.totPrice + animals.goldfish.getPrice()*getAntal1());
-            System.out.println("You added a " + getSelectAnimal1() + ". New total price is:" + Receipt.totPrice);
-//            receipt.updateBasket("Goldfish");
-            
-            basket.addCos(animals.goldfish);
-        }
-        PaneDisplay.button = false;
-    }
+public int selectedPane(){
+    return Pane.getSelectedIndex();
 }
+    public void updateTotal(int a)
+    {
+        receipt1.setTotal(a);
+    }
+
+
+
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -109,14 +118,13 @@ public void getAnimalx()
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        brugesIkke = new semesterprojekt.Receipt();
         shopName = new javax.swing.JLabel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        Pane = new javax.swing.JTabbedPane();
         paneDisplay1 = new semesterprojekt.PaneDisplay();
         paneDisplay2 = new semesterprojekt.PaneDisplay();
         paneDisplay3 = new semesterprojekt.PaneDisplay();
         paneDisplay4 = new semesterprojekt.PaneDisplay();
-        kvittering1 = new semesterprojekt.Receipt();
+        receipt1 = new semesterprojekt.Receipt();
 
         jButton1.setText("jButton1");
 
@@ -124,10 +132,10 @@ public void getAnimalx()
 
         shopName.setText("Pet Shop");
 
-        jTabbedPane2.addTab("Aquatic", paneDisplay1);
-        jTabbedPane2.addTab("Reptile", paneDisplay2);
-        jTabbedPane2.addTab("Mammal", paneDisplay3);
-        jTabbedPane2.addTab("Bird", paneDisplay4);
+        Pane.addTab("Aquatic", paneDisplay1);
+        Pane.addTab("Reptile", paneDisplay2);
+        Pane.addTab("Mammal", paneDisplay3);
+        Pane.addTab("Bird", paneDisplay4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -136,13 +144,9 @@ public void getAnimalx()
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(shopName)
-                            .addComponent(kvittering1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(shopName)
+                    .addComponent(receipt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pane, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,24 +154,25 @@ public void getAnimalx()
                 .addContainerGap()
                 .addComponent(shopName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(kvittering1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Pane, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(receipt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private semesterprojekt.Receipt brugesIkke;
+    private javax.swing.JTabbedPane Pane;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private semesterprojekt.Receipt kvittering1;
     private semesterprojekt.PaneDisplay paneDisplay1;
     private semesterprojekt.PaneDisplay paneDisplay2;
     private semesterprojekt.PaneDisplay paneDisplay3;
     private semesterprojekt.PaneDisplay paneDisplay4;
+    private semesterprojekt.Receipt receipt1;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
 }
+
 

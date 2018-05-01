@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Aquatic extends Animals
+public class Aquatic extends Animal
 {
     int aquariumSize;
     public Aquatic(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)

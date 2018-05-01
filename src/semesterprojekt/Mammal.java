@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Mammal extends Animals
+public class Mammal extends Animal
 {
     String activity;
     int sizeOfLitter;
