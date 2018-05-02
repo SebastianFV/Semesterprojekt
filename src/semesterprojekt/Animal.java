@@ -5,11 +5,13 @@
  */
 package semesterprojekt;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Squid
  */
-public class Animals 
+public class Animal 
 {
     private int yearsOld;
     private int expectedLifeAge;
@@ -22,7 +24,7 @@ public class Animals
     private boolean isCarnivore;
     private boolean isALoner;
 
-    public Animals( int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isAlive, boolean isHerbivore, boolean isCarnivore, boolean isALoner)
+    public Animal( int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isAlive, boolean isHerbivore, boolean isCarnivore, boolean isALoner)
     {
         this.yearsOld = yearsOld;
         this.expectedLifeAge = expectedLifeAge;
@@ -143,4 +145,7 @@ public class Animals
 	{
             return "Animal: " + species + " - Years of age: "+ yearsOld + " Years old" + " - Expected Age of Death: " + expectedLifeAge + " - Weight: " + adultSize + "Kg.";
 	}
+
 }
+
+

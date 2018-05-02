@@ -5,18 +5,17 @@
  */
 package semesterprojekt;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author Nicho
  */
 public class Receipt extends javax.swing.JPanel 
-{
-//    Display display;
-//    GUI gui;
-    /**
-     * Creates new form Kvittering
-     */
-    
+{   
+    Basket basket;
+    Overview overview;
+    GUI gui;
     int ID = 1000000;
     public static int totPrice;
     
@@ -42,14 +41,43 @@ public class Receipt extends javax.swing.JPanel
 
     public void setTotalPrice(int totPrice)
     {
-        this.totPrice = totPrice;
+        this.totPrice = this.totPrice + totPrice;
         totalPrice.setText("Total price:" + totPrice);
     }
     
-//    public static void getTotalPrice()
-//    {
-//        totalPrice
-//    }
+    public void updateBasket(String animal)
+    {
+        receiptBasket.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { animal };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+    }
+    
+    public void setTotal(int a)
+    {
+        setTotalPrice(a);
+    }
+    
+    public int getTotalPrice()
+    {
+        return totPrice;
+    }
+    
+    public void updateKurv() 
+    {
+    DefaultListModel listModel = new DefaultListModel();
+    for( int i = 0; i < basket.kunder.size(); i++) {
+        listModel.addElement(String.format("%d%s%s%s%d%s%.2f%s"
+                , basket.kunder.get(i).getAntal() 
+                , " stk    " 
+                , basket.kunder.get(i).getSpecies() 
+                , "      "
+                , basket.kunder.get(i).getPrice()
+                , " kr."));
+    }
+    receiptBasket.setModel(listModel);
+}
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -87,7 +115,8 @@ public class Receipt extends javax.swing.JPanel
         jSeparator6 = new javax.swing.JSeparator();
         thanksForVisiting = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
-        itemList = new java.awt.List();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        receiptBasket = new javax.swing.JList<>();
 
         Petshop2.setText("Pet Shop");
 
@@ -187,6 +216,13 @@ public class Receipt extends javax.swing.JPanel
 
         date.setText("Date: ");
 
+        receiptBasket.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(receiptBasket);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -227,7 +263,7 @@ public class Receipt extends javax.swing.JPanel
                                 .addComponent(jSeparator4)
                                 .addComponent(jSeparator2)
                                 .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(itemList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jScrollPane2))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
                         .addComponent(thanksForVisiting)))
@@ -254,9 +290,9 @@ public class Receipt extends javax.swing.JPanel
                     .addComponent(date))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(itemList, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -295,7 +331,6 @@ public class Receipt extends javax.swing.JPanel
     private javax.swing.JLabel costumerID;
     private javax.swing.JLabel date;
     private javax.swing.JLabel inDkk;
-    private java.awt.List itemList;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -306,11 +341,13 @@ public class Receipt extends javax.swing.JPanel
     private javax.swing.JLabel jLabel24;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JList<String> receiptBasket;
     private javax.swing.JLabel thanksForVisiting;
     private javax.swing.JLabel tlf;
     private javax.swing.JLabel totalAntalDyr;
