@@ -21,7 +21,7 @@ public class Dyreshop
     Mammal mammal;
     
     //List
-    public ArrayList<Animal> kunder;       // Contains the content of the basket
+    public ArrayList<Kunde> kunder;       // Contains the content of the basket
     
     //Variables
     private double balance = 0;                             // Amount paid
@@ -228,14 +228,14 @@ public class Dyreshop
     }
     
     //Basket
-     public void addCos(Animal cos)
+     public void addCos(Kunde cos)
     {
         kunder.add(cos);
     }
 
     public int getPriceBasket()
     {
-        for(Animal cos : kunder)
+        for(Kunde cos : kunder)
         {
             return cos.getPrice();
         }
@@ -243,7 +243,7 @@ public class Dyreshop
     }
     public int getAntalBasket()
     {
-        for(Animal cos : kunder)
+        for(Kunde cos : kunder)
         {
             return cos.getAntal();
         }
@@ -251,7 +251,7 @@ public class Dyreshop
     }
     public int samletPris()
     {
-        for (Animal cos : kunder)
+        for (Kunde cos : kunder)
         {
             return cos.getAntal() * cos.getPrice();
         }
