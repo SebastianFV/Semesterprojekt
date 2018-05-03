@@ -43,11 +43,7 @@ public class BenytDyreshop
             {
                 case 0:
                 {
-<<<<<<< HEAD
-                    if (gui.getButton() == true)
-=======
                     if (gui.getButton1() == true)
->>>>>>> 73c93de35576c7514ed1bccf42e614fd386966ef
                     {
                         // Print of each variable in the gui.set below, to make sure it works.
 //                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
