@@ -35,7 +35,6 @@ public class BenytDyreshop
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         vindue.setSize(550, 600);
         vindue.setVisible(true);
-        System.out.println("Hello world");
         overview.makeTestData();
         while (gui.isShowing())
         {
@@ -43,7 +42,7 @@ public class BenytDyreshop
             {
                 case 0:
                 {
-                    if (gui.getButton1() == true)
+                    if (gui.getButton1() == false)
                     {
                     gui.setTotal(overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
                     System.out.println(gui.getSelectAnimal1());
