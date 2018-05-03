@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Squid
  */
-public class Overview 
+public class TestData 
 {
     ArrayList<Animal> reptileList = new ArrayList<>();
     ArrayList<Animal> aquaticList = new ArrayList<>();

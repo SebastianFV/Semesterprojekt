@@ -17,7 +17,7 @@ public class Bird extends Animal
         super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
         this.birdCage = birdCage;
     }
-
+    //get and set method
     public int getBirdCage() {
         return birdCage;
     }
@@ -26,9 +26,9 @@ public class Bird extends Animal
         this.birdCage = birdCage;
     }
 
-    public String toString()
-    {
-        return super.toString() + "Size of bird cage: " + birdCage;
-    }    
+//    public String toString()
+//    {
+//        return super.toString() + "Size of bird cage: " + birdCage;
+//    }    
     
 }

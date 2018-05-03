@@ -61,22 +61,10 @@ public class PaneDisplay extends javax.swing.JPanel {
         choice1.addItem("Dinosaur");
         choice1.addItem("Dragon");
     }
-    
-    public void getPrice (){
-        animalPrice.setText("" + animals.getPrice());
-    }
-    
-    public void setAntal(){
-        Antal.setValue("" + animals.getAntal());
-    }
-    
+        
     public int getAntal(){
         value = (Integer) Antal.getValue();
         return value;
-    }
-
-    public void tilfojTilKurv(){
-        
     }
     
     public String getSelectAnimal(){

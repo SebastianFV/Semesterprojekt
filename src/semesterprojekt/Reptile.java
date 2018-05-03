@@ -11,7 +11,15 @@ package semesterprojekt;
  */
 public class Reptile extends Animal
 {
-
+    int terrariumSize;
+    int eatingHabbits;
+    public Reptile(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int terrariumSize, boolean isALoner, int eatingHabbits)
+    {
+        super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
+        this.terrariumSize = terrariumSize;
+        this.eatingHabbits = eatingHabbits;
+    }
+    //get and set method
     public int getTerrariumSize() {
         return terrariumSize;
     }
@@ -26,19 +34,10 @@ public class Reptile extends Animal
 
     public void setEatingHabbits(int eatingHabbits) {
         this.eatingHabbits = eatingHabbits;
-    }
-    int terrariumSize;
-    int eatingHabbits;
-    public Reptile(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int terrariumSize, boolean isALoner, int eatingHabbits)
-    {
-        super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
-        this.terrariumSize = terrariumSize;
-        this.eatingHabbits = eatingHabbits;
-    }
-    
-    public String toString()
-    {
-        return super.toString() + "Size of Terrarium: " + terrariumSize;
-    }
+    }   
+//    public String toString()
+//    {
+//        return super.toString() + "Size of Terrarium: " + terrariumSize;
+//    }
     
 }

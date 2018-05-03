@@ -12,9 +12,8 @@ import java.util.ArrayList;
  */
 public class GUI extends javax.swing.JPanel 
 {
-    Overview overview;
+    TestData overview;
     Receipt receipt = new Receipt();
-    Basket basket = new Basket();
     Animal animal;
 
 //    Display display;
@@ -24,17 +23,16 @@ public class GUI extends javax.swing.JPanel
      */
     public GUI() 
     {
-//        ArrayList<Aquatic> aquatic;
-//        aquatic = new ArrayList<>();
-//        aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
         initComponents();
         paneDisplay1.setnavneAquatic(null);
         paneDisplay2.setnavneReptile(null);
         paneDisplay3.setnavneMammal(null);
         paneDisplay4.setnavneBird(null);
     }
+    //Get and set method
+    // PaneDisplay G/S method
         public int getAntal1(){
-            return (Integer) paneDisplay1.getAntal();
+        return (Integer) paneDisplay1.getAntal();
         }
         public int getAntal2(){
             return (Integer) paneDisplay2.getAntal();
@@ -46,42 +44,30 @@ public class GUI extends javax.swing.JPanel
             return (Integer) paneDisplay4.getAntal();
         }
         
-        public void setTotalPrice(int totPrice)
-        {
-            receipt1.setTotalPrice(totPrice);
-        }
-        
         public String getSelectAnimal1(){
             return paneDisplay1.getSelectAnimal();
-        }
-        public int getSelectIndex1(){
-            return paneDisplay1.getSelectedIndex();
-        }
-        
+        }        
         public String getSelectAnimal2(){
             return paneDisplay2.getSelectAnimal();
         }
-        public int getSelectIndex2(){
-            return paneDisplay2.getSelectedIndex();
-        }
-        
         public String getSelectAnimal3(){
             return paneDisplay3.getSelectAnimal();
-        }
-        public int getSelectIndex3(){
-            return paneDisplay3.getSelectedIndex();
         }
         public String getSelectAnimal4(){
             return paneDisplay4.getSelectAnimal();
         }
+        
+        public int getSelectIndex1(){
+        return paneDisplay1.getSelectedIndex();
+        }
+        public int getSelectIndex2(){
+            return paneDisplay2.getSelectedIndex();
+        }
+        public int getSelectIndex3(){
+            return paneDisplay3.getSelectedIndex();
+        }
         public int getSelectIndex4(){
             return paneDisplay4.getSelectedIndex();
-        }
-        
-        public void printSelect(){
-            System.out.println(getAntal1());
-            System.out.println(getSelectAnimal1());
-            System.out.println(getSelectAnimal2());
         }
         
         public boolean getButton1()
@@ -103,28 +89,43 @@ public class GUI extends javax.swing.JPanel
         {
             return paneDisplay4.getButton();
         }
-    void initialize()
-    {
-//        date.setText("Date: " + Dyreshop.getTime());
-        System.out.println("Initialize "+receipt1);
-        receipt1.initialize();
-    }
-    
-    public void refresh()
-    {
-        receipt1.receitRefresh();
-    }
-public int selectedPane(){
-    return Pane.getSelectedIndex();
-}
-    public void updateTotal(int a)
-    {
-        receipt1.setTotal(a);
-    }
+    // Receipt G/S method
+        public void setTotalPrice(int totPrice)
+        {
+            receipt1.setTotalPrice(totPrice);
+        }        
+        public void refresh()
+        {
+            receipt1.receitRefresh();
+        }
 
+        public void setTotal(int a)
+        {
+            receipt1.setTotal(a);
+        }
+        
+//        public void updateBasketWindow()
+//        {
+//            receipt1.updateKurv();
+//        }
 
+        // GUI method
+        
+        void initialize()
+        {
+            System.out.println("Initialize "+receipt1);
+            receipt1.initialize();
+        }
 
-
+        public int selectedPane()
+        {
+        return Pane.getSelectedIndex();
+        }
+//        public void printSelect(){
+//            System.out.println(getAntal1());
+//            System.out.println(getSelectAnimal1());
+//            System.out.println(getSelectAnimal2());
+//        }
 
 
     /**

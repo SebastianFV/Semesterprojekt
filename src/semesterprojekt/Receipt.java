@@ -13,8 +13,8 @@ import javax.swing.DefaultListModel;
  */
 public class Receipt extends javax.swing.JPanel 
 {   
-    Basket basket;
-    Overview overview;
+    TestData overview;
+    Dyreshop dyreshop;
     GUI gui;
     int ID = 1000000;
     public static int totPrice;
@@ -67,17 +67,17 @@ public class Receipt extends javax.swing.JPanel
     public void updateKurv() 
     {
     DefaultListModel listModel = new DefaultListModel();
-    for( int i = 0; i < basket.kunder.size(); i++) {
+    for( int i = 0; i < dyreshop.kunder.size(); i++) {
         listModel.addElement(String.format("%d%s%s%s%d%s%.2f%s"
-                , basket.kunder.get(i).getAntal() 
+                , dyreshop.kunder.get(i).getAntal() 
                 , " stk    " 
-                , basket.kunder.get(i).getSpecies() 
+                , dyreshop.kunder.get(i).getSpecies() 
                 , "      "
-                , basket.kunder.get(i).getPrice()
+                , dyreshop.kunder.get(i).getPrice()
                 , " kr."));
     }
-    receiptBasket.setModel(listModel);
-}
+//    kunder.setModel(listModel);
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.

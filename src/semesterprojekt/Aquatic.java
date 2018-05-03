@@ -17,7 +17,7 @@ public class Aquatic extends Animal
         super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
         this.aquariumSize = aquariumSize;
     }
-
+    //get and set method
     public int getAquariumSize() {
         return aquariumSize;
     }
@@ -26,8 +26,8 @@ public class Aquatic extends Animal
         this.aquariumSize = aquariumSize;
     }
 
-    public String toString()
-    {
-        return super.toString() + "Size of aquarium: " + aquariumSize;
-    }    
+//    public String toString()
+//    {
+//        return super.toString() + "Size of aquarium: " + aquariumSize;
+//    }    
 }

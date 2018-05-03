@@ -19,7 +19,7 @@ public class Mammal extends Animal
         this.activity = activity;
         this.sizeOfLitter = sizeOfLitter;
     }
-
+    //get and set method
     public String getActivity() {
         return activity;
     }
@@ -36,9 +36,9 @@ public class Mammal extends Animal
         this.sizeOfLitter = sizeOfLitter;
     }
 
-    public String toString()
-    {
-        return super.toString() + "Amount of children: " + sizeOfLitter + "Activity for the pet: " + activity;
-    }    
+//    public String toString()
+//    {
+//        return super.toString() + "Amount of children: " + sizeOfLitter + "Activity for the pet: " + activity;
+//    }    
     
 }

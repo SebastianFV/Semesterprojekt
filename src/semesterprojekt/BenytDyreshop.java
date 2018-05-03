@@ -25,7 +25,7 @@ public class BenytDyreshop
     {
         Receipt receipt;
         PaneDisplay paneDisplay = new PaneDisplay();
-        Overview overview = new Overview();
+        TestData overview = new TestData();
 //        Overview.makeAnimals();
         Dyreshop dyreshop = new Dyreshop();
         GUI gui = new GUI();
@@ -45,7 +45,7 @@ public class BenytDyreshop
                 {
                     if (gui.getButton1() == true)
                     {
-                    gui.updateTotal(overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
+                    gui.setTotal(overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
                     System.out.println(gui.getSelectAnimal1());
                     }
                 }
@@ -53,7 +53,7 @@ public class BenytDyreshop
                 {
                     if (gui.getButton2() == true)
                     {
-                    gui.updateTotal(overview.reptileList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
+                    gui.setTotal(overview.reptileList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
                     System.out.println(gui.getSelectAnimal1());
                     }   
                 }
@@ -61,7 +61,7 @@ public class BenytDyreshop
                 {
                     if (gui.getButton3() == true)
                     {
-                    gui.updateTotal(overview.mammalList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
+                    gui.setTotal(overview.mammalList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
                     System.out.println(gui.getSelectAnimal1());
                     }
                 }
@@ -69,7 +69,7 @@ public class BenytDyreshop
                 {
                     if (gui.getButton4() == true)
                     {
-                    gui.updateTotal(overview.birdList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
+                    gui.setTotal(overview.birdList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
                     System.out.println(gui.getSelectAnimal1());
                     }
                 }
