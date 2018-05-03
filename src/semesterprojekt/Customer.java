@@ -9,14 +9,22 @@ package semesterprojekt;
  *
  * @author Nicho
  */
-public class Kunde {
-    Animal animal;    
+public class Customer {
+
+    Animal animal;
     Reptile reptile;
     Aquatic aquatic;
     Bird bird;
     Mammal mammal;
     public int price;
-
+    public int antal;
+    public int ID = 10000;
+    
+    public Customer(int price, int antal, int ID)
+    {
+        this.price = price;
+        this.antal = antal;
+    }
 
     public int getPrice() {
         return price;
@@ -41,6 +49,4 @@ public class Kunde {
     public void setID(int ID) {
         this.ID = ID;
     }
-    public int antal;
-    public int ID = 10000;
 }

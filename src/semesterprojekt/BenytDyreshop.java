@@ -17,12 +17,14 @@ public class BenytDyreshop
     Bird bird;
     Mammal mammal;
     Animal animals;
-    static int finalPrice;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException 
     {
+        
+        int finalPrice = 0;
+        int antal = 0;
         Receipt receipt;
         PaneDisplay paneDisplay = new PaneDisplay();
         TestData overview = new TestData();
@@ -48,9 +50,12 @@ public class BenytDyreshop
                         // Print of each variable in the gui.set below, to make sure it works.
 //                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
 //                        System.out.println(gui.getAntal1());
-                        gui.setTotal(overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
+                        finalPrice = overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
+                        gui.setTotal(finalPrice);
+                        
                         System.out.println(gui.getSelectAnimal1());
                         System.out.println("Current pane " + gui.selectedPane());
+                        
                     }
                     break;
                 }
@@ -58,7 +63,8 @@ public class BenytDyreshop
                 {
                     if (gui.getButton2() == true)
                     {
-                        gui.setTotal(overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2());
+                        finalPrice = overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2();
+                        gui.setTotal(finalPrice);
                         System.out.println(gui.getSelectAnimal2());
                         System.out.println("Current pane " + gui.selectedPane());
                     }
@@ -68,7 +74,8 @@ public class BenytDyreshop
                 {
                     if (gui.getButton3() == true)
                     {
-                        gui.setTotal(overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3());
+                        finalPrice = overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3();
+                        gui.setTotal(finalPrice);
                         System.out.println(gui.getSelectAnimal3());
                         System.out.println("Current pane " + gui.selectedPane());
                     }
@@ -78,17 +85,20 @@ public class BenytDyreshop
                 {
                     if (gui.getButton4() == true)
                     {
-                        gui.setTotal(overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4());
+                        finalPrice = overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4();
+                        gui.setTotal(finalPrice);
                         System.out.println(gui.getSelectAnimal4());
                         System.out.println("Current pane " + gui.selectedPane());
                     }
                     break;
                 }
                 default:
-                    System.out.println("Should not be possible");
+                    System.out.println("This option should not be possible");
                     break;
             }
-            gui.setButton();
+            gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
+            Customer cus = new Customer(finalPrice, antal, Dyreshop.getID());   // Creating the initial customer object.
+            dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
         }
     }
 //              Thread.sleep(1000);

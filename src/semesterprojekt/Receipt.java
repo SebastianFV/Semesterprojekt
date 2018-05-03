@@ -63,13 +63,13 @@ public class Receipt extends javax.swing.JPanel
     public void updateKurv() 
     {
     DefaultListModel listModel = new DefaultListModel();
-    for( int i = 0; i < dyreshop.kunder.size(); i++) {
+    for( int i = 0; i < dyreshop.customer.size(); i++) {
         listModel.addElement(String.format("%d%s%s%s%d%s%.2f%s"
-                , dyreshop.kunder.get(i).getAntal() 
+                , dyreshop.customer.get(i).getAntal() 
                 , " stk    " 
 //                , dyreshop.kunder.get(i).getSpecies() 
 //                , "      "
-                , dyreshop.kunder.get(i).getPrice()
+                , dyreshop.customer.get(i).getPrice()
                 , " kr."));
     }
 //    kunder.setModel(listModel);
@@ -109,7 +109,6 @@ public class Receipt extends javax.swing.JPanel
         inDkk = new javax.swing.JLabel();
         totalPrice = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
-        thanksForVisiting = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         receiptBasket = new javax.swing.JList<>();
@@ -208,8 +207,6 @@ public class Receipt extends javax.swing.JPanel
 
         totalPrice.setText("Total price:");
 
-        thanksForVisiting.setText("Thansk for visiting, see you soon");
-
         date.setText("Date: ");
 
         receiptBasket.setModel(new javax.swing.AbstractListModel<String>() {
@@ -225,44 +222,40 @@ public class Receipt extends javax.swing.JPanel
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(152, 152, 152)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(Petshop1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(CVR, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(131, 131, 131)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tlf)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(11, 11, 11)
-                                        .addComponent(Istedgade))
-                                    .addComponent(adresse, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(22, 22, 22)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(totalAntalDyr)
-                                    .addGap(68, 68, 68)
-                                    .addComponent(inDkk)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                                    .addComponent(totalPrice))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(date)
-                                    .addGap(212, 212, 212)
-                                    .addComponent(costumerID))
-                                .addComponent(jSeparator4)
-                                .addComponent(jSeparator2)
-                                .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jScrollPane2))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(thanksForVisiting)))
+                        .addGap(152, 152, 152)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Petshop1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CVR, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tlf)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(11, 11, 11)
+                                    .addComponent(Istedgade))
+                                .addComponent(adresse, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(totalAntalDyr)
+                                .addGap(68, 68, 68)
+                                .addComponent(inDkk)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                                .addComponent(totalPrice))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(date)
+                                .addGap(212, 212, 212)
+                                .addComponent(costumerID))
+                            .addComponent(jSeparator4)
+                            .addComponent(jSeparator2)
+                            .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2))))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -297,9 +290,7 @@ public class Receipt extends javax.swing.JPanel
                     .addComponent(totalPrice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(thanksForVisiting)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -344,7 +335,6 @@ public class Receipt extends javax.swing.JPanel
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JList<String> receiptBasket;
-    private javax.swing.JLabel thanksForVisiting;
     private javax.swing.JLabel tlf;
     private javax.swing.JLabel totalAntalDyr;
     private javax.swing.JLabel totalPrice;

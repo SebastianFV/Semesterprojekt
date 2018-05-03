@@ -21,7 +21,7 @@ public class Dyreshop
     Mammal mammal;
     
     //List
-    public ArrayList<Kunde> kunder;       // Contains the content of the basket
+    public ArrayList<Customer> customer;       // Contains the content of the basket
     
     //Variables
     private double balance = 0;                             // Amount paid
@@ -199,17 +199,17 @@ public class Dyreshop
     {
         if (balance >= totalPrice) 
         {
-            for (int i = 0; i < kunder.size(); i++) 
+            for (int i = 0; i < customer.size(); i++) 
             {
-                earned += kunder.get(i).getPrice();
-                for (int j = 0; j < kunder.get(i).getAntal(); j++) 
+                earned += customer.get(i).getPrice();
+                for (int j = 0; j < customer.get(i).getAntal(); j++) 
                 {
                     soldAnimals += 1;
                 }
             }
             balance -= totalPrice;
             totalCostomer += 1;
-            kunder.clear();
+            customer.clear();
             totalPrice = 0;
             return 1;
         } else {
@@ -228,14 +228,14 @@ public class Dyreshop
     }
     
     //Basket
-     public void addCos(Kunde cos)
+     public void addCos(Customer cus)
     {
-        kunder.add(cos);
+        customer.add(cus);
     }
 
     public int getPriceBasket()
     {
-        for(Kunde cos : kunder)
+        for(Customer cos : customer)
         {
             return cos.getPrice();
         }
@@ -243,7 +243,7 @@ public class Dyreshop
     }
     public int getAntalBasket()
     {
-        for(Kunde cos : kunder)
+        for(Customer cos : customer)
         {
             return cos.getAntal();
         }
@@ -251,7 +251,7 @@ public class Dyreshop
     }
     public int samletPris()
     {
-        for (Kunde cos : kunder)
+        for (Customer cos : customer)
         {
             return cos.getAntal() * cos.getPrice();
         }
@@ -262,11 +262,11 @@ public class Dyreshop
     
     public void printLog()
     {
-        for (int i = 0; i < kunder.size(); i++) 
+        for (int i = 0; i < customer.size(); i++) 
         {
-            System.out.println("Antal: " + kunder.get(i).getAntal());
-            System.out.println("pris pr styk: " + kunder.get(i).getPrice());
-            System.out.println("samlet pris: " + kunder.get(i).getPrice() * kunder.get(i).getAntal());
+            System.out.println("Antal: " + customer.get(i).getAntal());
+            System.out.println("pris pr styk: " + customer.get(i).getPrice());
+            System.out.println("samlet pris: " + customer.get(i).getPrice() * customer.get(i).getAntal());
         }
     }
 }
