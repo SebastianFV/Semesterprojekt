@@ -18,13 +18,6 @@ public class GUI extends javax.swing.JPanel
 
     public GUI() 
     {
-<<<<<<< HEAD
-//        ArrayList<Aquatic> aquatic;
-//        aquatic = new ArrayList<>();
-//        aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
-        
-=======
->>>>>>> dc523b2d845555bb80a1e19feaca3c91c12217b3
         initComponents();
         paneDisplay1.setnavneAquatic(null);
         paneDisplay2.setnavneReptile(null);
