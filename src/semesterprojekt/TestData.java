@@ -11,28 +11,38 @@ import java.util.ArrayList;
  *
  * @author Squid
  */
-public class Overview 
+public class TestData 
 {
-    ArrayList<Animals> reptile = new ArrayList<>();
-    ArrayList<Animals> aquatic = new ArrayList<>();
-    ArrayList<Animals> bird = new ArrayList<>();
-    ArrayList<Animals> mammal = new ArrayList<>();
+    ArrayList<Animal> reptileList = new ArrayList<>();
+    ArrayList<Animal> aquaticList = new ArrayList<>();
+    ArrayList<Animal> birdList = new ArrayList<>();
+    ArrayList<Animal> mammalList = new ArrayList<>();
     
     
     public void makeTestData()
     {
-        reptile.add(snake);
-        reptile.add(turtle);
-        reptile.add(salamander);
-        reptile.add(dinosaur);
-        reptile.add(dragon);
+        reptileList.add(snake);
+        reptileList.add(turtle);
+        reptileList.add(salamander);
+        reptileList.add(dinosaur);
+        reptileList.add(dragon);
                 
-        aquatic.add(goldfish);
+        aquaticList.add(goldfish);
+        aquaticList.add(whale);
+        aquaticList.add(shark);
+        aquaticList.add(seacucumber);
+        aquaticList.add(dolphin);
         
-        bird.add(dove);
+        birdList.add(dove);
+        birdList.add(pigeon);
+        birdList.add(smallBird);
+        birdList.add(bigBird);
         
-        mammal.add(ape);
-        
+        mammalList.add(ape);
+        mammalList.add(elephant);
+        mammalList.add(horse);
+        mammalList.add(dog);
+        mammalList.add(tiger);
     }
 //     public Aquatic(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int aquariumSize, boolean isALoner, int eatingHabbits)
     

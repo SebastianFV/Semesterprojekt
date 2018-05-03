@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Mammal extends Animals
+public class Mammal extends Animal
 {
     String activity;
     int sizeOfLitter;
@@ -19,7 +19,7 @@ public class Mammal extends Animals
         this.activity = activity;
         this.sizeOfLitter = sizeOfLitter;
     }
-
+    //get and set method
     public String getActivity() {
         return activity;
     }
@@ -36,9 +36,9 @@ public class Mammal extends Animals
         this.sizeOfLitter = sizeOfLitter;
     }
 
-    public String toString()
-    {
-        return super.toString() + "Amount of children: " + sizeOfLitter + "Activity for the pet: " + activity;
-    }    
+//    public String toString()
+//    {
+//        return super.toString() + "Amount of children: " + sizeOfLitter + "Activity for the pet: " + activity;
+//    }    
     
 }

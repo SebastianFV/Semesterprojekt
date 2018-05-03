@@ -13,6 +13,9 @@ import javax.swing.DefaultListModel;
  */
 public class Receipt extends javax.swing.JPanel 
 {   
+    TestData overview;
+    Dyreshop dyreshop;
+    GUI gui;
     int ID = 1000000;
     public static int totPrice;
     
@@ -38,7 +41,7 @@ public class Receipt extends javax.swing.JPanel
 
     public void setTotalPrice(int totPrice)
     {
-        this.totPrice = totPrice;
+        this.totPrice = this.totPrice + totPrice;
         totalPrice.setText("Total price:" + totPrice);
     }
     
@@ -51,10 +54,30 @@ public class Receipt extends javax.swing.JPanel
         });
     }
     
-//    public static void getTotalPrice()
-//    {
-//        totalPrice
-//    }
+    public void setTotal(int a)
+    {
+        setTotalPrice(a);
+    }
+    
+    public int getTotalPrice()
+    {
+        return totPrice;
+    }
+    
+    public void updateKurv() 
+    {
+    DefaultListModel listModel = new DefaultListModel();
+    for( int i = 0; i < dyreshop.kunder.size(); i++) {
+        listModel.addElement(String.format("%d%s%s%s%d%s%.2f%s"
+                , dyreshop.kunder.get(i).getAntal() 
+                , " stk    " 
+                , dyreshop.kunder.get(i).getSpecies() 
+                , "      "
+                , dyreshop.kunder.get(i).getPrice()
+                , " kr."));
+    }
+//    kunder.setModel(listModel);
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.

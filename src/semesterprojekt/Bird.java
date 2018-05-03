@@ -9,7 +9,7 @@ package semesterprojekt;
  *
  * @author Squid
  */
-public class Bird extends Animals
+public class Bird extends Animal
 {
     int birdCage;
     public Bird(int yearsOld, int expectedLifeAge, int price, String species, int adultSize, boolean isHerbivore, boolean isCarnivore, int birdCage, boolean isALoner, int eatingHabbits)
@@ -17,7 +17,7 @@ public class Bird extends Animals
         super(yearsOld, expectedLifeAge, price, species, adultSize, isALoner, isHerbivore, isCarnivore, isALoner);
         this.birdCage = birdCage;
     }
-
+    //get and set method
     public int getBirdCage() {
         return birdCage;
     }
@@ -26,9 +26,9 @@ public class Bird extends Animals
         this.birdCage = birdCage;
     }
 
-    public String toString()
-    {
-        return super.toString() + "Size of bird cage: " + birdCage;
-    }    
+//    public String toString()
+//    {
+//        return super.toString() + "Size of bird cage: " + birdCage;
+//    }    
     
 }

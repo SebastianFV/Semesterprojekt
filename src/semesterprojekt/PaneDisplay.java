@@ -17,7 +17,7 @@ public class PaneDisplay extends javax.swing.JPanel {
     Aquatic aquatic;
     Bird bird;
     Mammal mammal;
-    Animals animals;
+    Animal animals;
     int value;
     int item;
     public static boolean button;
@@ -28,7 +28,9 @@ public class PaneDisplay extends javax.swing.JPanel {
         initComponents();
     }
     
-    public void setnavneAquatic(ArrayList<Animals> nn) {
+    
+    
+    public void setnavneAquatic(ArrayList<Animal> nn) {
         choice1.removeAll();
         choice1.addItem("Goldfish");
         choice1.addItem("Whale");
@@ -59,27 +61,25 @@ public class PaneDisplay extends javax.swing.JPanel {
         choice1.addItem("Dinosaur");
         choice1.addItem("Dragon");
     }
-    
-    public void getPrice (){
-        animalPrice.setText("" + animals.getPrice());
-    }
-    
-    public void setAntal(){
-        Antal.setValue("" + animals.getAntal());
-    }
-    
+        
     public int getAntal(){
         value = (Integer) Antal.getValue();
         return value;
-    }
-
-    public void tilfojTilKurv(){
-        
     }
     
     public String getSelectAnimal(){
         dyr = choice1.getSelectedItem();
         return dyr;
+    }
+    
+    public int getSelectedIndex()
+    {
+        return choice1.getSelectedIndex();
+    }
+    
+    public boolean getButton()
+    {
+        return OKBotton.isSelected();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -160,8 +160,14 @@ public class PaneDisplay extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OKBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKBottonActionPerformed
-
+        if(button == true)
+        {
+            button = false;
+        }
+        else 
+        {
             button = true;
+        }
     }//GEN-LAST:event_OKBottonActionPerformed
 
 
