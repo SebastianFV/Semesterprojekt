@@ -67,8 +67,8 @@ public class Receipt extends javax.swing.JPanel
         listModel.addElement(String.format("%d%s%s%s%d%s%.2f%s"
                 , dyreshop.kunder.get(i).getAntal() 
                 , " stk    " 
-                , dyreshop.kunder.get(i).getSpecies() 
-                , "      "
+//                , dyreshop.kunder.get(i).getSpecies() 
+//                , "      "
                 , dyreshop.kunder.get(i).getPrice()
                 , " kr."));
     }
