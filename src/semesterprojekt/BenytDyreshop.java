@@ -45,9 +45,14 @@ public class BenytDyreshop
                 {
                     if (gui.getButton() == true)
                     {
+                        // Print of each variable in the gui.set below, to make sure it works.
+//                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
+//                        System.out.println(gui.getAntal1());
                         gui.setTotal(overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1());
                         System.out.println(gui.getSelectAnimal1());
+                        System.out.println("Current pane " + gui.selectedPane());
                     }
+                    break;
                 }
                 case 1: 
                 {
@@ -55,7 +60,9 @@ public class BenytDyreshop
                     {
                         gui.setTotal(overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2());
                         System.out.println(gui.getSelectAnimal2());
-                    }   
+                        System.out.println("Current pane " + gui.selectedPane());
+                    }
+                    break;
                 }
                 case 2: 
                 {
@@ -63,7 +70,9 @@ public class BenytDyreshop
                     {
                         gui.setTotal(overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3());
                         System.out.println(gui.getSelectAnimal3());
+                        System.out.println("Current pane " + gui.selectedPane());
                     }
+                    break;
                 }
                 case 3: 
                 {
@@ -71,10 +80,15 @@ public class BenytDyreshop
                     {
                         gui.setTotal(overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4());
                         System.out.println(gui.getSelectAnimal4());
+                        System.out.println("Current pane " + gui.selectedPane());
                     }
+                    break;
                 }
-                gui.setButton();
+                default:
+                    System.out.println("Should not be possible");
+                    break;
             }
+            gui.setButton();
         }
     }
 //              Thread.sleep(1000);

@@ -17,7 +17,7 @@ public class Receipt extends javax.swing.JPanel
     Dyreshop dyreshop;
     GUI gui;
     int ID = 1000000;
-    public static int totPrice;
+    public int totPrice = 0;
     
     public Receipt() 
     {
@@ -39,11 +39,6 @@ public class Receipt extends javax.swing.JPanel
         date.setText("Date: " + Dyreshop.getTime());
     }
 
-    public void setTotalPrice(int totPrice)
-    {
-        this.totPrice = this.totPrice + totPrice;
-        totalPrice.setText("Total price:" + totPrice);
-    }
     
     public void updateBasket(String animal)
     {
@@ -54,9 +49,10 @@ public class Receipt extends javax.swing.JPanel
         });
     }
     
-    public void setTotal(int a)
+    public void setTotalPrice(int price)
     {
-        setTotalPrice(a);
+        totPrice = totPrice + price;
+        totalPrice.setText("Total price:" + totPrice);
     }
     
     public int getTotalPrice()
