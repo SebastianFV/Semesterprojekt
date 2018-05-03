@@ -79,7 +79,12 @@ public class PaneDisplay extends javax.swing.JPanel {
     
     public boolean getButton()
     {
-        return OKBotton.isSelected();
+        return button;
+    }
+    
+    public void setButton()
+    {
+        button = false;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -160,14 +165,7 @@ public class PaneDisplay extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OKBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKBottonActionPerformed
-        if(button == true)
-        {
-            button = false;
-        }
-        else 
-        {
-            button = true;
-        }
+        button = true;
     }//GEN-LAST:event_OKBottonActionPerformed
 
 

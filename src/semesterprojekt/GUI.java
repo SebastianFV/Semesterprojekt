@@ -84,6 +84,18 @@ public class GUI extends javax.swing.JPanel
         {
             return paneDisplay4.getButton();
         }
+        
+        public boolean getButton()
+        {
+            return PaneDisplay.button;
+        }
+        
+        // Muligvis muligt at gøre det samme for getButton funktionerne.
+        public void setButton()
+        {
+            PaneDisplay.button = false;
+        }
+        
     // Receipt G/S method
         public void setTotalPrice(int totPrice)
         {
@@ -114,13 +126,8 @@ public class GUI extends javax.swing.JPanel
 
         public int selectedPane()
         {
-        return Pane.getSelectedIndex();
+            return Pane.getSelectedIndex();
         }
-//        public void printSelect(){
-//            System.out.println(getAntal1());
-//            System.out.println(getSelectAnimal1());
-//            System.out.println(getSelectAnimal2());
-//        }
 
 
     /**
