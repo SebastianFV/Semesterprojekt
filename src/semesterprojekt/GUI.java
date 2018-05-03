@@ -16,16 +16,12 @@ public class GUI extends javax.swing.JPanel
     Basket basket = new Basket();
     Overview animals = new Overview();
 
-//    Display display;
-
-    /**
-     * Creates new form GUI
-     */
     public GUI() 
     {
 //        ArrayList<Aquatic> aquatic;
 //        aquatic = new ArrayList<>();
 //        aquatic.add(new Aquatic(1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
+        
         initComponents();
         paneDisplay1.setnavneAquatic(null);
         paneDisplay2.setnavneReptile(null);
