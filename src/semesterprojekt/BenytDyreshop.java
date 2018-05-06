@@ -101,7 +101,7 @@ public class BenytDyreshop
                     case 4:
                     {
                         // Sætter antal, ID og finalPrice ind i cus-objektet, og nulstiller så disse variable.
-                        if(Payment.payButton == true)
+                        if(Payment.payButton != true)
                         {
                             cus.antal = antal;
                             cus.ID = Dyreshop.getID();
