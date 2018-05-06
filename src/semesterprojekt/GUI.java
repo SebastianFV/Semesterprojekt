@@ -148,6 +148,7 @@ public class GUI extends javax.swing.JPanel
         paneDisplay2 = new semesterprojekt.PaneDisplay();
         paneDisplay3 = new semesterprojekt.PaneDisplay();
         paneDisplay4 = new semesterprojekt.PaneDisplay();
+        payment2 = new semesterprojekt.Payment();
         receipt1 = new semesterprojekt.Receipt();
 
         jButton1.setText("jButton1");
@@ -160,6 +161,7 @@ public class GUI extends javax.swing.JPanel
         Pane.addTab("Reptile", paneDisplay2);
         Pane.addTab("Mammal", paneDisplay3);
         Pane.addTab("Bird", paneDisplay4);
+        Pane.addTab("Payment", payment2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -194,6 +196,7 @@ public class GUI extends javax.swing.JPanel
     private semesterprojekt.PaneDisplay paneDisplay2;
     private semesterprojekt.PaneDisplay paneDisplay3;
     private semesterprojekt.PaneDisplay paneDisplay4;
+    private semesterprojekt.Payment payment2;
     private semesterprojekt.Receipt receipt1;
     private javax.swing.JLabel shopName;
     // End of variables declaration//GEN-END:variables
