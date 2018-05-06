@@ -101,7 +101,7 @@ public class BenytDyreshop
             System.out.println(Dyreshop.getID());
             Customer cus = new Customer(finalPrice, antal, Dyreshop.getID());   // Creating the initial customer object.
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
-            dyreshop.printList();
+//            dyreshop.printList();
             gui.updateBasketWindow();
 //            dyreshop.printLog();
             

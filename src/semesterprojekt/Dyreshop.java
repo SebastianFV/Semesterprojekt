@@ -209,7 +209,7 @@ public class Dyreshop
             }
             balance -= totalPrice;
             totalCostomer += 1;
-            customer.clear();
+//            customer.clear();
             totalPrice = 0;
             return 1;
         } else {
