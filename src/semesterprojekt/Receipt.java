@@ -80,8 +80,8 @@ public class Receipt extends javax.swing.JPanel
     {
         for (int i = 0; i < dyreshop.customer.size(); i++)
         {
-            System.out.println(dyreshop.customer.get(i).getPrice());
-            System.out.println(dyreshop.customer.get(i).getAntal());
+            System.out.println(dyreshop.customer.get(1).getPrice());
+            System.out.println(dyreshop.customer.get(1).getAntal());
         }
     }
     
