@@ -6,6 +6,7 @@
 package semesterprojekt;
 
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 /**
  *
  * @author Squid
@@ -13,7 +14,8 @@ import java.util.ArrayList;
 public class GUI extends javax.swing.JPanel 
 {
     TestData overview;
-    Receipt receipt = new Receipt();
+    Dyreshop dyreshop;
+    Receipt receipt;
     Animal animal;
 
     public GUI() 
@@ -113,7 +115,14 @@ public class GUI extends javax.swing.JPanel
         
         public void updateBasketWindow()
         {
-            receipt1.updateKurv();
+        
+            DefaultListModel<String> listModel = new DefaultListModel();
+            int a = dyreshop.customer.size();
+            for( int i = 0; a > i; i++) 
+            {
+                receipt1.updateKurv(dyreshop.customer.get(i).getSpecies(), dyreshop.customer.get(i).getPrice());
+            }
+            Customer.setModel(listModel);
         }
         
         // GUI method
@@ -133,7 +142,6 @@ public class GUI extends javax.swing.JPanel
         {
             receipt.updatetxt();
         }
-
 
     /**
      * This method is called from within the constructor to initialize the form.

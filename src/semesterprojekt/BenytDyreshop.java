@@ -120,17 +120,15 @@ public class BenytDyreshop
 //                System.out.println(antal);
 //                System.out.println(Dyreshop.getID());
                 Thread.sleep(1000);
-<<<<<<< HEAD
-=======
+
                 for (int i = 0; i < dyreshop.customer.size(); i++)
                 {
                     System.out.println(dyreshop.customer.get(i).getPrice());
                     System.out.println(dyreshop.customer.get(i).getAntal());
                 }
 //                gui.updateTXT();
->>>>>>> f20946f2da53604495a93fc9438793a82ca5f5c3
     //            dyreshop.printList();
-//                gui.updateBasketWindow();
+                dyreshop.updateBasketWindow();
 
 //                dyreshop.printLog();     
             }

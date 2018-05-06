@@ -271,5 +271,9 @@ public class Dyreshop
             System.out.println("samlet pris: " + customer.get(i).getPrice() * customer.get(i).getAntal());
         }
     }
+    
+    public void updateBasketWindow(){
+        gui.updateBasketWindow();
+    }
 }
    
