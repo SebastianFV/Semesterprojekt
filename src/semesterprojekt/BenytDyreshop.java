@@ -120,6 +120,7 @@ public class BenytDyreshop
                 System.out.println(antal);
                 System.out.println(Dyreshop.getID());
                 Thread.sleep(1000);
+                gui.updateTXT();
     //            dyreshop.printList();
 //                gui.updateBasketWindow();
 //                dyreshop.printLog();     

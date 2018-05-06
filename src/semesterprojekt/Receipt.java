@@ -59,15 +59,7 @@ public class Receipt extends javax.swing.JPanel
     {
         return totPrice;
     }
-    
-//    public void updatebasket(String a, int b)
-//    {
-//        DefaultListModel listModel = new DefaultListModel<>();
-//        listModel.addElement("%s %d", a, b);
-//        receiptBasket = new JList<>(listModel);
-//        add(receiptBasket);
-//    }
-    
+
     public void updateKurv() 
     {
         DefaultListModel<String> listModel = new DefaultListModel();
@@ -84,8 +76,13 @@ public class Receipt extends javax.swing.JPanel
     Customer.setModel(listModel);
     }
     
-    public void updatetxt(){
-        
+    public void updatetxt()
+    {
+        for (int i = 0; i < dyreshop.customer.size(); i++)
+        {
+            System.out.println(dyreshop.customer.get(i).getPrice());
+            System.out.println(dyreshop.customer.get(i).getAntal());
+        }
     }
     
     /**

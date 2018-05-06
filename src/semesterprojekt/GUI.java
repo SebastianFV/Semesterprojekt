@@ -128,6 +128,11 @@ public class GUI extends javax.swing.JPanel
         {
             return Pane.getSelectedIndex();
         }
+        
+        public void updateTXT()
+        {
+            receipt.updatetxt();
+        }
 
 
     /**
