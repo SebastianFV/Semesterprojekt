@@ -116,7 +116,6 @@ public class GUI extends javax.swing.JPanel
             receipt1.updateKurv();
         }
         
-
         // GUI method
         
         void initialize()

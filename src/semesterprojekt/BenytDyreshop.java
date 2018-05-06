@@ -42,7 +42,7 @@ public class BenytDyreshop
         {
             Customer cus = new Customer(finalPrice, antal, Dyreshop.getID());   // Creating the initial customer object.
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
-            while(Payment.payButton != true)
+            while(Payment.payButton != true && gui.isShowing())
             {
                 switch(gui.selectedPane())
                 {
