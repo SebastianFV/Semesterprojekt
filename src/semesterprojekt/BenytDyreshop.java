@@ -103,8 +103,7 @@ public class BenytDyreshop
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
             dyreshop.printList();
             gui.updateBasketWindow();
-//            dyreshop.printLog();
-            
+//            dyreshop.printLog();   
         }
     }
 //              Thread.sleep(1000);
