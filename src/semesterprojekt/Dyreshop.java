@@ -21,7 +21,7 @@ public class Dyreshop
     Mammal mammal;
     
     //List
-    public ArrayList<Customer> customer = new ArrayList<Customer>();       // Contains the content of the basket
+    public ArrayList<Customer> customer = new ArrayList<>();       // Contains the content of the basket
     
     //Variables
     private double balance = 0;                             // Amount paid
