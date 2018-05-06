@@ -51,7 +51,7 @@ public class Receipt extends javax.swing.JPanel
     
     public void setTotalPrice(int price)
     {
-        totPrice = totPrice + price;
+        totPrice = price;
         totalPrice.setText("Total price:" + totPrice);
     }
     

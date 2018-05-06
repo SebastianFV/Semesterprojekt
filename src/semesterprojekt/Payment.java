@@ -11,6 +11,7 @@ package semesterprojekt;
  */
 public class Payment extends javax.swing.JPanel {
 
+    public static boolean payButton;
     /**
      * Creates new form Payment
      */
@@ -30,6 +31,11 @@ public class Payment extends javax.swing.JPanel {
         PaymentCard = new javax.swing.JButton();
 
         PaymentCard.setText("Credit Card");
+        PaymentCard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PaymentCardActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -48,6 +54,10 @@ public class Payment extends javax.swing.JPanel {
                 .addContainerGap(262, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PaymentCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentCardActionPerformed
+        payButton = true;
+    }//GEN-LAST:event_PaymentCardActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
