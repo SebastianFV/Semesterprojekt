@@ -40,70 +40,91 @@ public class BenytDyreshop
         overview.makeTestData();
         while (gui.isShowing())
         {
-//            System.out.println(gui.selectedPane());
-            switch(gui.selectedPane())
-            {
-                case 0:
-                {
-                    if (gui.getButton1() == true)
-                    {
-                        // Print of each variable in the gui.set below, to make sure it works.
-//                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
-//                        System.out.println(gui.getAntal1());
-                        finalPrice = overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
-                        gui.setTotal(finalPrice); 
-                        System.out.println(gui.getSelectAnimal1());
-                        System.out.println("Current pane " + gui.selectedPane());
-                        
-                    }
-                    break;
-                }
-                case 1: 
-                {
-                    if (gui.getButton2() == true)
-                    {
-                        finalPrice = overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2();
-                        gui.setTotal(finalPrice);
-                        System.out.println(gui.getSelectAnimal2());
-                        System.out.println("Current pane " + gui.selectedPane());
-                    }
-                    break;
-                }
-                case 2: 
-                {
-                    if (gui.getButton3() == true)
-                    {
-                        finalPrice = overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3();
-                        gui.setTotal(finalPrice);
-                        System.out.println(gui.getSelectAnimal3());
-                        System.out.println("Current pane " + gui.selectedPane());
-                    }
-                    break;
-                }
-                case 3: 
-                {
-                    if (gui.getButton4() == true)
-                    {
-                        finalPrice = overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4();
-                        gui.setTotal(finalPrice);
-                        System.out.println(gui.getSelectAnimal4());
-                        System.out.println("Current pane " + gui.selectedPane());
-                    }
-                    break;
-                }
-                default:
-                    System.out.println("This option should not be possible");
-                    break;
-            }
-            gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
-            System.out.println(finalPrice);
-            System.out.println(antal);
-            System.out.println(Dyreshop.getID());
             Customer cus = new Customer(finalPrice, antal, Dyreshop.getID());   // Creating the initial customer object.
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
-//            dyreshop.printList();
-            gui.updateBasketWindow();
-//            dyreshop.printLog();   
+            while(Payment.payButton != true)
+            {
+                switch(gui.selectedPane())
+                {
+                    case 0:
+                    {
+                        if (gui.getButton1() == true)
+                        {
+                            // Print of each variable in the gui.set below, to make sure it works.
+    //                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
+    //                        System.out.println(gui.getAntal1());
+                            finalPrice = finalPrice + overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
+                            gui.setTotal(finalPrice); 
+                            antal = antal + gui.getAntal1();
+                            System.out.println(gui.getSelectAnimal1());
+                            System.out.println("Current pane " + gui.selectedPane());
+
+                        }
+                        break;
+                    }
+                    case 1: 
+                    {
+                        if (gui.getButton2() == true)
+                        {
+                            finalPrice = finalPrice + overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2();
+                            gui.setTotal(finalPrice);
+                            antal = antal + gui.getAntal1();
+                            System.out.println(gui.getSelectAnimal2());
+                            System.out.println("Current pane " + gui.selectedPane());
+                        }
+                        break;
+                    }
+                    case 2: 
+                    {
+                        if (gui.getButton3() == true)
+                        {
+                            finalPrice = finalPrice + overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3();
+                            gui.setTotal(finalPrice);
+                            antal = antal + gui.getAntal1();
+                            System.out.println(gui.getSelectAnimal3());
+                            System.out.println("Current pane " + gui.selectedPane());
+                        }
+                        break;
+                    }
+                    case 3: 
+                    {
+                        if (gui.getButton4() == true)
+                        {
+                            finalPrice = finalPrice + overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4();
+                            gui.setTotal(finalPrice);
+                            antal = antal + gui.getAntal1();
+                            System.out.println(gui.getSelectAnimal4());
+                            System.out.println("Current pane " + gui.selectedPane());
+                        }
+                        break;
+                    }
+                    case 4:
+                    {
+                        // Sætter antal, ID og finalPrice ind i cus-objektet, og nulstiller så disse variable.
+                        if(Payment.payButton == true)
+                        {
+                            cus.antal = antal;
+                            cus.ID = Dyreshop.getID();
+                            cus.price = finalPrice;
+                            antal = 0;
+                            finalPrice = 0;
+                        }
+                        break;
+                    } 
+                    default:
+                        System.out.println("This option should not be possible");
+                        break;
+                }
+                gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
+                System.out.println(finalPrice);
+                System.out.println(antal);
+                System.out.println(Dyreshop.getID());
+                Thread.sleep(1000);
+    //            dyreshop.printList();
+//                gui.updateBasketWindow();
+//                dyreshop.printLog();     
+            }
+            Payment.payButton = false;
         }
     }
 //              Thread.sleep(1000);
