@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package semesterprojekt;
-
+import java.util.ArrayList;
 import javax.swing.JFrame;
 /**
  *
@@ -51,8 +51,7 @@ public class BenytDyreshop
 //                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
 //                        System.out.println(gui.getAntal1());
                         finalPrice = overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
-                        gui.setTotal(finalPrice);
-                        
+                        gui.setTotal(finalPrice); 
                         System.out.println(gui.getSelectAnimal1());
                         System.out.println("Current pane " + gui.selectedPane());
                         
@@ -97,8 +96,15 @@ public class BenytDyreshop
                     break;
             }
             gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
+            System.out.println(finalPrice);
+            System.out.println(antal);
+            System.out.println(Dyreshop.getID());
             Customer cus = new Customer(finalPrice, antal, Dyreshop.getID());   // Creating the initial customer object.
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
+            dyreshop.printList();
+            gui.updateBasketWindow();
+//            dyreshop.printLog();
+            
         }
     }
 //              Thread.sleep(1000);

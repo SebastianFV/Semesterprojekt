@@ -111,10 +111,11 @@ public class GUI extends javax.swing.JPanel
             receipt1.setTotalPrice(price);
         }
         
-//        public void updateBasketWindow()
-//        {
-//            receipt1.updateKurv();
-//        }
+        public void updateBasketWindow()
+        {
+            receipt1.updateKurv();
+        }
+        
 
         // GUI method
         

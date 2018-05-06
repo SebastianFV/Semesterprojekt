@@ -21,7 +21,7 @@ public class Dyreshop
     Mammal mammal;
     
     //List
-    public ArrayList<Customer> customer;       // Contains the content of the basket
+    public ArrayList<Customer> customer = new ArrayList<Customer>();       // Contains the content of the basket
     
     //Variables
     private double balance = 0;                             // Amount paid
@@ -228,9 +228,11 @@ public class Dyreshop
     }
     
     //Basket
-     public void addCos(Customer cus)
+     public void addCos(Customer a)
     {
-        customer.add(cus);
+        customer.add(a);
+        totalCostomer = totalCostomer +1;
+        ID = ID+1;
     }
 
     public int getPriceBasket()
