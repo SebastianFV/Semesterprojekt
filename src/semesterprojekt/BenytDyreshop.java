@@ -103,9 +103,9 @@ public class BenytDyreshop
                         // Sætter antal, ID og finalPrice ind i cus-objektet, og nulstiller så disse variable.
                         if(Payment.payButton != true)
                         {
-                            cus.antal = antal;
-                            cus.ID = Dyreshop.getID();
-                            cus.price = finalPrice;
+                            cus.setAntal(antal);
+                            cus.setID(Dyreshop.getID());
+                            cus.setPrice(finalPrice);
                             antal = 0;
                             finalPrice = 0;
                         }
@@ -116,10 +116,19 @@ public class BenytDyreshop
                         break;
                 }
                 gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
-                System.out.println(finalPrice);
-                System.out.println(antal);
-                System.out.println(Dyreshop.getID());
+//                System.out.println(finalPrice);
+//                System.out.println(antal);
+//                System.out.println(Dyreshop.getID());
                 Thread.sleep(1000);
+<<<<<<< HEAD
+=======
+                for (int i = 0; i < dyreshop.customer.size(); i++)
+                {
+                    System.out.println(dyreshop.customer.get(i).getPrice());
+                    System.out.println(dyreshop.customer.get(i).getAntal());
+                }
+//                gui.updateTXT();
+>>>>>>> f20946f2da53604495a93fc9438793a82ca5f5c3
     //            dyreshop.printList();
 //                gui.updateBasketWindow();
 
