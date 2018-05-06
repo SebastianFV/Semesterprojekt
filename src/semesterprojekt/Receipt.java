@@ -71,8 +71,9 @@ public class Receipt extends javax.swing.JPanel
     public void updateKurv() 
     {
         DefaultListModel<String> listModel = new DefaultListModel();
-        for( int i = 0; dyreshop.customer.size() > i; i++) {
-        listModel.addElement(String.format("%d%sd%s"
+        int a = dyreshop.customer.size();
+        for( int i = 0; a > i; i++) {
+        listModel.addElement(String.format("%d%s%d%s"
                 , dyreshop.customer.get(i).getAntal() 
                 , " stk    " 
 //                , dyreshop.kunder.get(i).getSpecies() 
