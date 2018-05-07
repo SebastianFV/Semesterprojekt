@@ -12,11 +12,6 @@ import javax.swing.DefaultListModel;
  * @author Nicho
  */
 public class Customer {
-
-    static void setModel(DefaultListModel listModel) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     Animal animal;
     Reptile reptile;
     Aquatic aquatic;

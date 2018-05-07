@@ -126,10 +126,10 @@ public class BenytDyreshop
                     System.out.println(dyreshop.customer.get(i).getPrice());
                     System.out.println(dyreshop.customer.get(i).getAntal());
                 }
-//                gui.updateTXT();
+                gui.updateTXT();
 //                dyreshop.printList();
-//                gui.updateBasketWindow();
-
+                gui.updateBasketWindow("tiger", 17);
+                gui.updateBasketWindow("elefant", 40);
 //                dyreshop.printLog();     
             }
             Payment.payButton = false;

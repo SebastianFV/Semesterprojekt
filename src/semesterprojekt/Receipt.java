@@ -13,8 +13,8 @@ import javax.swing.DefaultListModel;
  */
 public class Receipt extends javax.swing.JPanel 
 {   
-    TestData overview;
-    Dyreshop dyreshop;
+    TestData testdata;
+    Dyreshop dyreshop = new Dyreshop();
     GUI gui;
     int ID = 1000000;
     public int totPrice = 0;
@@ -60,14 +60,15 @@ public class Receipt extends javax.swing.JPanel
         return totPrice;
     }
 
-    public void updateKurv(String a, int b) 
+    public void addToBasket(String a, int b) 
     {
         DefaultListModel<String> listModel = new DefaultListModel();
         listModel.addElement(String.format("%d%s"
                 , b
                 , a));
-        Customer.setModel(listModel);
+        receiptBasket.setModel(listModel);
     }
+    
     public void updatetxt()
     {
         for (int i = 0; i < dyreshop.customer.size(); i++)

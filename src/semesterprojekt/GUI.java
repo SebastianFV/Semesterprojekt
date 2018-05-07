@@ -15,7 +15,6 @@ public class GUI extends javax.swing.JPanel
 {
     TestData overview;
     Dyreshop dyreshop;
-    Receipt receipt;
     Animal animal;
 
     public GUI() 
@@ -114,21 +113,19 @@ public class GUI extends javax.swing.JPanel
             receipt1.setTotalPrice(price);
         }
         
-        public void updateBasketWindow()
+        public void updateBasketWindow(String beskrivelse, int pris)
         {
 
             if (dyreshop.customer.size() > 0 ) 
             {
-                DefaultListModel<String> listModel = new DefaultListModel();
-                int a = dyreshop.customer.size();
-                for( int i = 0; a > i; i++) 
+                int c = dyreshop.customer.size();
+                for( int i = 0; c > i; i++) 
                 {
-                    receipt1.updateKurv("what up", dyreshop.customer.get(i).getPrice());
+                    receipt1.addToBasket(beskrivelse, pris);
                 }
-                Customer.setModel(listModel);
             }
-            
         }
+        
         
         // GUI method
         
@@ -148,7 +145,7 @@ public class GUI extends javax.swing.JPanel
         
         public void updateTXT()
         {
-            receipt.updatetxt();
+            receipt1.updatetxt();
         }
 
     /**
