@@ -39,16 +39,6 @@ public class Receipt extends javax.swing.JPanel
     {
         date.setText("Date: " + Dyreshop.getTime());
     }
-
-    
-    public void updateBasket(String animal)
-    {
-        receiptBasket.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { animal };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-    }
     
 //    PUBLIC VOID SETTOTALPRICE(INT PRICE)
 //    {
@@ -62,6 +52,8 @@ public class Receipt extends javax.swing.JPanel
         return totPrice;
     }
 
+
+    
     public void updateBasket() 
     {
         int finalPrice = 0;
@@ -69,13 +61,13 @@ public class Receipt extends javax.swing.JPanel
         DefaultListModel<String> listModel = new DefaultListModel();
         if (dyreshop.basket.size() >= 0 ) 
         {
-            listModel.addElement(String.format("%s                      %s                      %s"
+            listModel.addElement(String.format("%s%30s%30s"
                 , "Dyr"
-                , "Antal"
-                , "pris"));
+                , "pris"
+                , "Antal"));
             for( int i = 0; dyreshop.basket.size() > i; i++) 
             {
-                listModel.addElement(String.format("%s                      %d                      %d"
+                listModel.addElement(String.format("%s%30d%30d"
                 , dyreshop.basket.get(i).getDyr()
                 , dyreshop.basket.get(i).getPris()
                 , dyreshop.basket.get(i).getAntal()));

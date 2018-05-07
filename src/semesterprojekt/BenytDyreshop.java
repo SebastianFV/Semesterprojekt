@@ -33,7 +33,7 @@ public class BenytDyreshop
 //        overview.makeTestData();
         while (gui.isShowing())
         {
-            
+            gui.refresh();
         }
     }
 //              Thread.sleep(1000);

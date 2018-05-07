@@ -5,13 +5,22 @@
  */
 package semesterprojekt;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Nicho
  */
 public class Payment extends javax.swing.JPanel {
 
+    Dyreshop dyreshop;
+    GUI ejer;
     public static boolean payButton;
+    public void initialize(Dyreshop dyreshop, GUI ejer)
+    {
+        this.dyreshop = dyreshop;
+        this.ejer = ejer;
+    }
     /**
      * Creates new form Payment
      */
@@ -19,6 +28,10 @@ public class Payment extends javax.swing.JPanel {
         initComponents();
     }
 
+    public boolean getPayment ()
+    {
+        return payButton;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

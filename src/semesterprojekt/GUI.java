@@ -23,10 +23,16 @@ public class GUI extends javax.swing.JPanel
 
     }
     
+    public void refresh()
+    {
+        receipt1.receitRefresh();
+    }
+    
     void initialize(Dyreshop dyreshop)
     {
         this.dyreshop = dyreshop;
-
+        
+        payment2.initialize(dyreshop, this);
         paneDisplay1.initialize(dyreshop, this, dyreshop.getAnimals(1));
         paneDisplay2.initialize(dyreshop, this, dyreshop.getAnimals(2));
         paneDisplay3.initialize(dyreshop, this, dyreshop.getAnimals(3));
@@ -42,74 +48,14 @@ public class GUI extends javax.swing.JPanel
     }
     //Get and set method
     // PaneDisplay G/S method
-        public int getAntal1(){
-        return (Integer) paneDisplay1.getAntal();
-        }
-        public int getAntal2(){
-            return (Integer) paneDisplay2.getAntal();
-        }
-        public int getAntal3(){
-            return (Integer) paneDisplay3.getAntal();
-        }
-        public int getAntal4(){
-            return (Integer) paneDisplay4.getAntal();
-        }
+
         
-        public String getSelectAnimal1(){
-            return paneDisplay1.getSelectAnimal();
-        }        
-        public String getSelectAnimal2(){
-            return paneDisplay2.getSelectAnimal();
-        }
-        public String getSelectAnimal3(){
-            return paneDisplay3.getSelectAnimal();
-        }
-        public String getSelectAnimal4(){
-            return paneDisplay4.getSelectAnimal();
-        }
-        
-        public int getSelectIndex1(){
-        return paneDisplay1.getSelectedIndex();
-        }
-        public int getSelectIndex2(){
-            return paneDisplay2.getSelectedIndex();
-        }
-        public int getSelectIndex3(){
-            return paneDisplay3.getSelectedIndex();
-        }
-        public int getSelectIndex4(){
-            return paneDisplay4.getSelectedIndex();
-        }
-        
-        public boolean getButton1()
+        public void payButtonPush()
         {
-            return paneDisplay1.getButton();
-        }
-        
-        public boolean getButton2()
-        {
-            return paneDisplay2.getButton();
-        }
-        
-        public boolean getButton3()
-        {
-            return paneDisplay3.getButton();
-        }
-        
-        public boolean getButton4()
-        {
-            return paneDisplay4.getButton();
-        }
-        
-        public boolean getButton()
-        {
-            return PaneDisplay.button;
-        }
-        
-        // Muligvis muligt at gøre det samme for getButton funktionerne.
-        public void setButton()
-        {
-            PaneDisplay.button = false;
+            if(payment2.payButton != true)
+            {
+                dyreshop.resetBasket();
+            }
         }
         
     // Receipt G/S method

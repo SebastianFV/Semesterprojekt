@@ -82,6 +82,18 @@ public class Dyreshop
     
     public void addtobasket(String dyr, int pris, int antal) 
     {
-        basket.add(new Basket(dyr, pris, antal));
+        try{
+            basket.add(new Basket(dyr, pris, antal));
+        }
+        catch(ArithmeticException ex){
+            System.out.println("Cant do that");
+        }
     }
+    
+    public void resetBasket()
+    {
+            // Nulstille kurv
+    }
+    
+ 
 }  
