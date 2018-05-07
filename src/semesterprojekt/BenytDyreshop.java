@@ -116,9 +116,9 @@ public class BenytDyreshop
                         break;
                 }
                 gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
-//                System.out.println(finalPrice);
-//                System.out.println(antal);
-//                System.out.println(Dyreshop.getID());
+                System.out.println(finalPrice);
+                System.out.println(antal);
+                System.out.println(Dyreshop.getID());
                 Thread.sleep(1000);
                 for (int i = 0; i < dyreshop.customer.size(); i++)
                 {
@@ -126,7 +126,7 @@ public class BenytDyreshop
                     System.out.println(dyreshop.customer.get(i).getAntal());
                 }
 //                gui.updateTXT();
-    //            dyreshop.printList();
+//                dyreshop.printList();
 //                gui.updateBasketWindow();
 //                dyreshop.printLog();     
             }
