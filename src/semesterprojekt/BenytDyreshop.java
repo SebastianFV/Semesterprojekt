@@ -25,13 +25,13 @@ public class BenytDyreshop
         
         int finalPrice = 0;
         int antal = 0;
-        Receipt receipt;
+        Receipt receipt = new Receipt();
         PaneDisplay paneDisplay = new PaneDisplay();
         TestData overview = new TestData();
 //        Overview.makeAnimals();
         Dyreshop dyreshop = new Dyreshop();
         GUI gui = new GUI();
-        gui.initialize();
+        gui.initialize(dyreshop);
         JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

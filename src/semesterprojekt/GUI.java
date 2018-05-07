@@ -26,6 +26,7 @@ public class GUI extends javax.swing.JPanel
         paneDisplay3.setnavneMammal(null);
         paneDisplay4.setnavneBird(null);
     }
+   
     //Get and set method
     // PaneDisplay G/S method
         public int getAntal1(){
@@ -115,21 +116,28 @@ public class GUI extends javax.swing.JPanel
         
         public void updateBasketWindow()
         {
-        
-            DefaultListModel<String> listModel = new DefaultListModel();
-            int a = dyreshop.customer.size();
-            for( int i = 0; a > i; i++) 
+
+            if (dyreshop.customer.size() > 0 ) 
             {
-                receipt1.updateKurv(dyreshop.customer.get(i).getSpecies(), dyreshop.customer.get(i).getPrice());
+                DefaultListModel<String> listModel = new DefaultListModel();
+                int a = dyreshop.customer.size();
+                for( int i = 0; a > i; i++) 
+                {
+                    receipt1.updateKurv("what up", dyreshop.customer.get(i).getPrice());
+                }
+                Customer.setModel(listModel);
             }
-            Customer.setModel(listModel);
+            
         }
         
         // GUI method
         
-        void initialize()
+        void initialize(Dyreshop dyreshop)
         {
+            System.out.println("giver Dyreshoppen");
+            this.dyreshop = dyreshop;
             System.out.println("Initialize "+receipt1);
+            
             receipt1.initialize();
         }
 
