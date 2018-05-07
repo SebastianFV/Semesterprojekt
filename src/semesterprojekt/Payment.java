@@ -31,6 +31,11 @@ public class Payment extends javax.swing.JPanel {
         PaymentCard = new javax.swing.JButton();
 
         PaymentCard.setText("Credit Card");
+        PaymentCard.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                PaymentCardStateChanged(evt);
+            }
+        });
         PaymentCard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PaymentCardActionPerformed(evt);
@@ -58,6 +63,10 @@ public class Payment extends javax.swing.JPanel {
     private void PaymentCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentCardActionPerformed
         payButton = true;
     }//GEN-LAST:event_PaymentCardActionPerformed
+
+    private void PaymentCardStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PaymentCardStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PaymentCardStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

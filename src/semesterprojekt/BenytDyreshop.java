@@ -22,14 +22,6 @@ public class BenytDyreshop
      */
     public static void main(String[] args) throws InterruptedException 
     {
-        
-        int finalPrice = 0;
-        int antal = 0;
-        String selectedAnimal = "";
-        Receipt receipt = new Receipt();
-        PaneDisplay paneDisplay = new PaneDisplay();
-        TestData overview = new TestData();
-//        Overview.makeAnimals();
         Dyreshop dyreshop = new Dyreshop();
         GUI gui = new GUI();
         gui.initialize(dyreshop);
@@ -38,100 +30,10 @@ public class BenytDyreshop
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         vindue.setSize(550, 600);
         vindue.setVisible(true);
-        overview.makeTestData();
+//        overview.makeTestData();
         while (gui.isShowing())
         {
-            Customer cus = new Customer(finalPrice, antal, Dyreshop.getID(), selectedAnimal);   // Creating the initial customer object.
-            dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
-            while(Payment.payButton != true && gui.isShowing())
-            {
-                switch(gui.selectedPane())
-                {
-                    case 0:
-                    {
-                        if (gui.getButton1() == true)
-                        {
-                            finalPrice = finalPrice + overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
-                            gui.setTotal(finalPrice); 
-                            antal = antal + gui.getAntal1();
-                            selectedAnimal = gui.getSelectAnimal1();
-                            System.out.println(gui.getSelectAnimal1());
-                            System.out.println("Current pane " + gui.selectedPane());
-
-                        }
-                        break;
-                    }
-                    case 1: 
-                    {
-                        if (gui.getButton2() == true)
-                        {
-                            finalPrice = finalPrice + overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2();
-                            gui.setTotal(finalPrice);
-                            antal = antal + gui.getAntal1();
-                            selectedAnimal = gui.getSelectAnimal2();
-                            System.out.println(gui.getSelectAnimal2());
-                            System.out.println("Current pane " + gui.selectedPane());
-                        }
-                        break;
-                    }
-                    case 2: 
-                    {
-                        if (gui.getButton3() == true)
-                        {
-                            finalPrice = finalPrice + overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3();
-                            gui.setTotal(finalPrice);
-                            antal = antal + gui.getAntal1();
-                            selectedAnimal = gui.getSelectAnimal3();
-                            System.out.println(gui.getSelectAnimal3());
-                            System.out.println("Current pane " + gui.selectedPane());
-                        }
-                        break;
-                    }
-                    case 3: 
-                    {
-                        if (gui.getButton4() == true)
-                        {
-                            finalPrice = finalPrice + overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4();
-                            gui.setTotal(finalPrice);
-                            antal = antal + gui.getAntal1();
-                            selectedAnimal = gui.getSelectAnimal4();
-                            System.out.println(gui.getSelectAnimal4());
-                            System.out.println("Current pane " + gui.selectedPane());
-                        }
-                        break;
-                    }
-                    case 4:
-                    {
-                        // Sætter antal, ID og finalPrice ind i cus-objektet, og nulstiller så disse variable.
-                        if(Payment.payButton != true)
-                        {
-                            cus.setAntal(antal);
-                            cus.setID(Dyreshop.getID());
-                            cus.setPrice(finalPrice);
-                            antal = 0;
-                            finalPrice = 0;
-                        }
-                        break;
-                    } 
-                    default:
-                        System.out.println("This option should not be possible");
-                        break;
-                }
-                gui.setButton();                                                    // Reset the button to be false, so it doesn't spam true.
-                System.out.println(finalPrice);
-                System.out.println(antal);
-                System.out.println(Dyreshop.getID());
-                Thread.sleep(1000);
-
-                for (int i = 0; i < dyreshop.customer.size(); i++)
-                {
-                    System.out.println(dyreshop.customer.get(i).getPrice());
-                    System.out.println(dyreshop.customer.get(i).getAntal());
-                }
-                gui.updateTXT();
-                gui.addToBasket();
-            }
-            Payment.payButton = false;
+            
         }
     }
 //              Thread.sleep(1000);

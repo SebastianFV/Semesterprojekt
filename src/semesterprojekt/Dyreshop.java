@@ -7,21 +7,20 @@ package semesterprojekt;
 
 import java.util.ArrayList;
 import java.util.Date;
-import javax.swing.DefaultListModel;
 public class Dyreshop 
 {
+       
     //Class-object pointer reference
-    Receipt receipt;
-    GUI gui;
-    TestData overview;
-    Animal animal;
-    Reptile reptile;
-    Aquatic aquatic;
-    Bird bird;
-    Mammal mammal;
+    int finalPrice = 0;
+    int antal = 0;
+    String selectedAnimal = "";
     
     //List
-    public ArrayList<Customer> customer = new ArrayList<>();       // Contains the content of the basket
+    public ArrayList<Basket> basket = new ArrayList<>();       // Contains the content of the basket
+    public ArrayList<Animal> reptileList = new ArrayList<>();
+    public ArrayList<Animal> aquaticList = new ArrayList<>();
+    public ArrayList<Animal> birdList = new ArrayList<>();
+    public ArrayList<Animal> mammalList = new ArrayList<>();
     
     //Variables
     private double balance = 0;                             // Amount paid
@@ -31,6 +30,32 @@ public class Dyreshop
     private int totalCustomer = 0;                          // Amount of costomers since launch
     static int ID = 10000;
     
+    Dyreshop()
+    {
+        reptileList.add(new Reptile (2, 50, 500, "Snake", 100, false, true, 500, true, 500));
+        reptileList.add(new Reptile (7, 75, 1000, "Turtle", 75, true, true, 500, true, 100));
+        reptileList.add(new Reptile (2, 30, 500, "Salamander", 50, false, true, 500, true, 200));
+        reptileList.add(new Reptile (5000000, -4900100, 999999, "Dinosaur", 5000, false, true, 999999, true, 99999));
+        reptileList.add(new Reptile (3000, 10000, 999999, "Dragon", 999999, false, true, 9999999, true, 99999));
+
+        aquaticList.add(new Aquatic (1, 3, 50, "Goldfish", 10, true, false, 50, true, 5));
+        aquaticList.add(new Aquatic (5, 30, 500000, "Whale", 500, true, true, 50000000, true, 99999));
+        aquaticList.add(new Aquatic (3, 30, 999999, "Shark", 5000, false, true, 500000, true, 9999));
+        aquaticList.add(new Aquatic (1, 3, 50, "Sea Cucumber", 10, true, false, 50, true, 5));
+        aquaticList.add(new Aquatic (3, 30, 999999, "Dolphin", 5000, false, true, 500000, false, 9999));
+
+        birdList.add(new Bird (1, 5, 100, "Dove", 50, true, true, 500, false, 500));
+        birdList.add(new Bird (1, 5, 100, "Pigeon", 50, true, true, 500, false, 500));
+        birdList.add(new Bird (1, 5, 100, "small", 50, true, true, 500, false, 500));
+        birdList.add(new Bird (1, 10, 200, "large", 100, false, true, 50000, true, 1000));
+
+        mammalList.add(new Mammal (2, 13, 50, "Ape", 50, true, true, 5, false, 50, "Likes to climb"));
+        mammalList.add(new Mammal (2, 23, 500, "Elephant", 500, true, false, 50, false, 999, "Eating"));
+        mammalList.add(new Mammal (2, 13, 320, "horse", 400, false, false, 15, false, 100, "running on the fields"));
+        mammalList.add(new Mammal (2, 13, 50, "Dog", 50, false, true, 5, false, 30, "Playing fetch"));
+        mammalList.add(new Mammal (2, 20, 1000, "Tiger", 200, false, true, 20, false, 99, "sleeping"));
+    }
+    
     //Methods
     public static String getTime()
     {
@@ -38,244 +63,25 @@ public class Dyreshop
         String time = dato.toString();
         return time;
     }
-    
-    //Get og set
-    //G/S Animal information:
-    public int getAdultSize() {
-        return animal.getAdultSize();
-    }
-
-    public void setAdultSize(int adultSize) {
-        animal.setAdultSize(adultSize);
-    }
-
-    public int getPrice() {
-        return animal.getPrice();
-    }
-
-    public void setPrice(int price) {
-        animal.setPrice(price);
-    }
-    
-    public int getAntal() {
-        return animal.getAntal();
-    }
-
-    public void setAntal(int Antal) {
-        animal.setAntal(Antal);
-    }
-    
-    public boolean isIsALoner() {
-        return animal.isIsALoner();
-    }
-
-    public void setIsALoner(boolean isALoner) {
-        animal.setIsALoner(isALoner);
-    }
-
-    public int getYearsOld() {
-        return animal.getYearsOld();
-    }
-
-    public void setYearsOld(int yearsOld) {
-        animal.setYearsOld(yearsOld);
-    }
-
-    public int getExpectedLifeAge() {
-        return animal.getExpectedLifeAge();
-    }
-
-    public void setExpectedLifeAge(int expectedLifeAge) {
-        animal.setExpectedLifeAge(expectedLifeAge);
-    }
-
-    public String getSpecies() {
-        return animal.getSpecies();
-    }
-
-    public void setSpecies(String species) {
-        animal.setSpecies(species);
-    }
-
-    public int getWeight() {
-        return animal.getWeight();
-    }
-
-    public void setWeight(int weight) {
-        animal.setWeight(weight);
-    }
-
-    public boolean isIsAlive() {
-        return animal.isIsAlive();
-    }
-
-    public void setIsAlive(boolean isAlive) {
-        animal.setIsAlive(isAlive);
-    }
-
-    public boolean isIsHerbivore() {
-        return animal.isIsHerbivore();
-    }
-
-    public void setIsHerbivore(boolean isHerbivore) {
-        animal.setIsHerbivore(isHerbivore);
-    }
-
-    public boolean isIsCarnivore() {
-        return animal.isIsCarnivore();
-    }
-
-    public void setIsCarnivore(boolean isCarnivore) {
-        animal.setIsCarnivore(isCarnivore);
-    }
-        
-	public void birthday()
-	{
-            animal.birthday();
-	}
-		
-	public String toString()
-	{
-            return animal.toString();
-	}
-        
-    //G/S generel
-    
-    public double getBalance()
+    public ArrayList<Animal> getAnimals( int valg)
     {
-        return balance;
+        switch(valg) {
+            case 1: 
+                return aquaticList;
+            case 2:
+                return reptileList;
+            case 3:
+                return mammalList;
+            case 4:
+                return birdList;
+            
+        } 
+        return null;
     }
-    public void setBalance(int a)
-    {
-        balance = a;
-    }
-    
-    public int getSoldAnimals()
-    {
-        return soldAnimals;
-    }
-    public void setSoldAnimals(int a)
-    {
-        soldAnimals = a;
-    }
-    
-    public double getTotalPrice()
-    {
-        return totalPrice;
-    }
-    public void setTotalPrice(int a, int b)
-    {
-       totalPrice = a*b;
-    }
-    
-    public double getEarned()
-    {
-        return earned;
-    }
-    public void setEarned(int a)
-    {
-        earned = a;
-    }
-    
-    public int getTotalCostomer()
-    {
-        return totalCustomer;
-    }
-    public void setTotalCostomer(int a)
-    {
-        totalCustomer = a;
-    }
-    
-    public double getMoneyBack() 
-    {
-        double returnMoney = balance;
-        balance = 0;
-        System.out.println("Du får " + returnMoney + " kr retur");
-    //        eventLog.add(new Event("Indhold"));
-        return returnMoney;
-    }
-    
-    public int printList() 
-    {
-        if (balance >= totalPrice) 
-        {
-            for (int i = 0; i < customer.size(); i++) 
-            {
-                earned += customer.get(i).getPrice();
-                for (int j = 0; j < customer.get(i).getAntal(); j++) 
-                {
-                    soldAnimals += 1;
-                }
-            }
-            balance -= totalPrice;
-            totalCustomer += 1;
-//            customer.clear();
-            totalPrice = 0;
-            return 1;
-        } else {
-            return -1;
-        }
-    }
-    
-    public static int getID() 
-    {
-        return ID;
-    }
-
-    public static void setID() 
-    {
-        ID = ID++;
-    }
-    
-    //Basket
-     public void addCos(Customer a)
-    {
-        customer.add(a);
-        totalCustomer = totalCustomer +1;
-        ID = ID+1;
-    }
-
-    public int getPriceBasket()
-    {
-        for(Customer cos : customer)
-        {
-            return cos.getPrice();
-        }
-       return 0;
-    }
-    public int getAntalBasket()
-    {
-        for(Customer cos : customer)
-        {
-            return cos.getAntal();
-        }
-       return 0;
-    }
-    public int samletPris()
-    {
-        for (Customer cos : customer)
-        {
-            return cos.getAntal() * cos.getPrice();
-        }
-        return 0;
-    }
-    
 
     
-    public void printLog()
+    public void addtobasket(String dyr, int pris, int antal) 
     {
-        for (int i = 0; i < customer.size(); i++) 
-        {
-            System.out.println("Antal: " + customer.get(i).getAntal());
-            System.out.println("pris pr styk: " + customer.get(i).getPrice());
-            System.out.println("samlet pris: " + customer.get(i).getPrice() * customer.get(i).getAntal());
-        }
+        basket.add(new Basket(dyr, pris, antal));
     }
-//        public void updateBasketWindow(String a, int b){
-//        gui.updateBasketWindow(a, 5);
-//    }
-}
-    
-
-//}
-   
+}  

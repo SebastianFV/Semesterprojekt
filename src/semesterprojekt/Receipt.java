@@ -22,7 +22,7 @@ public class Receipt extends javax.swing.JPanel
     public Receipt() 
     {
         initComponents();
-        Dyreshop.setID();
+        //Dyreshop.setID();
     }
     
 
@@ -50,42 +50,43 @@ public class Receipt extends javax.swing.JPanel
         });
     }
     
-    public void setTotalPrice(int price)
-    {
-        totPrice = price;
-        totalPrice.setText("Total price:" + totPrice);
-    }
+//    PUBLIC VOID SETTOTALPRICE(INT PRICE)
+//    {
+//        FOR
+//        TOTPRICE = DYRESHOP.BASKET.GET(I).GETPRIS() * DYRESHOP.BASKET.GET(I).GETANTAL();
+//        TOTALPRICE.SETTEXT("TOTAL PRICE:" + TOTPRICE);
+//    }
     
     public int getTotalPrice()
     {
         return totPrice;
     }
 
-    public void addToBasket() 
+    public void updateBasket() 
     {
+        int finalPrice = 0;
+        int adding = 0;
         DefaultListModel<String> listModel = new DefaultListModel();
-        if (dyreshop.customer.size() >= 0 ) 
+        if (dyreshop.basket.size() >= 0 ) 
         {
-            for( int i = 0; dyreshop.customer.size() > i; i++) 
+            listModel.addElement(String.format("%s                      %s                      %s"
+                , "Dyr"
+                , "Antal"
+                , "pris"));
+            for( int i = 0; dyreshop.basket.size() > i; i++) 
             {
-                listModel.addElement(String.format("%s%d%d"
-                , dyreshop.customer.get(i).getSpecies()
-                , dyreshop.customer.get(i).getPrice()
-                , dyreshop.customer.get(i).getAntal()));
+                listModel.addElement(String.format("%s                      %d                      %d"
+                , dyreshop.basket.get(i).getDyr()
+                , dyreshop.basket.get(i).getPris()
+                , dyreshop.basket.get(i).getAntal()));
+//                adding = dyreshop.basket.get(i).getPris();
+                finalPrice = finalPrice + dyreshop.basket.get(i).getPris();
             }
+            
+            totalPrice.setText("Total Pris: " + finalPrice);
             receiptBasket.setModel(listModel);
         }
     }
-    
-    public void updatetxt()
-    {
-        for (int i = 0; i < dyreshop.customer.size(); i++)
-        {
-            System.out.println(dyreshop.customer.get(i).getPrice());
-            System.out.println(dyreshop.customer.get(i).getAntal());
-        }
-    }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -220,11 +221,6 @@ public class Receipt extends javax.swing.JPanel
 
         date.setText("Date: ");
 
-        receiptBasket.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane2.setViewportView(receiptBasket);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
