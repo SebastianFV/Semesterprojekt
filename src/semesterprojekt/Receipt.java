@@ -63,11 +63,11 @@ public class Receipt extends javax.swing.JPanel
     public void addToBasket() 
     {
         DefaultListModel<String> listModel = new DefaultListModel();
-        if (dyreshop.customer.size() > 0 ) 
+        if (dyreshop.customer.size() >= 0 ) 
         {
             for( int i = 0; dyreshop.customer.size() > i; i++) 
             {
-                listModel.addElement(String.format("%d%s"
+                listModel.addElement(String.format("%s%d%d"
                 , dyreshop.customer.get(i).getSpecies()
                 , dyreshop.customer.get(1).getPrice()
                 , dyreshop.customer.get(1).getAntal()));

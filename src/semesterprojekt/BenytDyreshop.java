@@ -25,6 +25,7 @@ public class BenytDyreshop
         
         int finalPrice = 0;
         int antal = 0;
+        String selectedAnimal = null;
         Receipt receipt = new Receipt();
         PaneDisplay paneDisplay = new PaneDisplay();
         TestData overview = new TestData();
@@ -40,7 +41,7 @@ public class BenytDyreshop
         overview.makeTestData();
         while (gui.isShowing())
         {
-            Customer cus = new Customer(finalPrice, antal, Dyreshop.getID(), gui.getSelectAnimal1());   // Creating the initial customer object.
+            Customer cus = new Customer(finalPrice, antal, Dyreshop.getID(), selectedAnimal);   // Creating the initial customer object.
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
             while(Payment.payButton != true && gui.isShowing())
             {
@@ -56,6 +57,7 @@ public class BenytDyreshop
                             finalPrice = finalPrice + overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
                             gui.setTotal(finalPrice); 
                             antal = antal + gui.getAntal1();
+                            selectedAnimal = gui.getSelectAnimal1();
                             System.out.println(gui.getSelectAnimal1());
                             System.out.println("Current pane " + gui.selectedPane());
 
@@ -69,6 +71,7 @@ public class BenytDyreshop
                             finalPrice = finalPrice + overview.reptileList.get(gui.getSelectIndex2()).getPrice() * gui.getAntal2();
                             gui.setTotal(finalPrice);
                             antal = antal + gui.getAntal1();
+                            selectedAnimal = gui.getSelectAnimal2();
                             System.out.println(gui.getSelectAnimal2());
                             System.out.println("Current pane " + gui.selectedPane());
                         }
@@ -81,6 +84,7 @@ public class BenytDyreshop
                             finalPrice = finalPrice + overview.mammalList.get(gui.getSelectIndex3()).getPrice() * gui.getAntal3();
                             gui.setTotal(finalPrice);
                             antal = antal + gui.getAntal1();
+                            selectedAnimal = gui.getSelectAnimal3();
                             System.out.println(gui.getSelectAnimal3());
                             System.out.println("Current pane " + gui.selectedPane());
                         }
@@ -93,6 +97,7 @@ public class BenytDyreshop
                             finalPrice = finalPrice + overview.birdList.get(gui.getSelectIndex4()).getPrice() * gui.getAntal4();
                             gui.setTotal(finalPrice);
                             antal = antal + gui.getAntal1();
+                            selectedAnimal = gui.getSelectAnimal4();
                             System.out.println(gui.getSelectAnimal4());
                             System.out.println("Current pane " + gui.selectedPane());
                         }
