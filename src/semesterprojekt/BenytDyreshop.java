@@ -25,13 +25,13 @@ public class BenytDyreshop
         
         int finalPrice = 0;
         int antal = 0;
-        Receipt receipt;
+        Receipt receipt = new Receipt();
         PaneDisplay paneDisplay = new PaneDisplay();
         TestData overview = new TestData();
 //        Overview.makeAnimals();
         Dyreshop dyreshop = new Dyreshop();
         GUI gui = new GUI();
-        gui.initialize();
+        gui.initialize(dyreshop);
         JFrame vindue = new JFrame("Pet shop");
         vindue.add(gui);
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -120,14 +120,21 @@ public class BenytDyreshop
                 System.out.println(antal);
                 System.out.println(Dyreshop.getID());
                 Thread.sleep(1000);
+
                 for (int i = 0; i < dyreshop.customer.size(); i++)
                 {
                     System.out.println(dyreshop.customer.get(i).getPrice());
                     System.out.println(dyreshop.customer.get(i).getAntal());
                 }
 //                gui.updateTXT();
+<<<<<<< HEAD
 //                dyreshop.printList();
 //                gui.updateBasketWindow();
+=======
+    //            dyreshop.printList();
+                dyreshop.updateBasketWindow();
+
+>>>>>>> 662636be108203bc1a13024c88beee88ee0d57f3
 //                dyreshop.printLog();     
             }
             Payment.payButton = false;

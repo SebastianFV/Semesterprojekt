@@ -28,7 +28,7 @@ public class Dyreshop
     private int soldAnimals = 0;                            // Counts animals sold
     private double totalPrice = 0;                          // Price to be paid
     private double earned = 0;                              // Amount earned since launch
-    private int totalCostomer = 0;                          // Amount of costomers since launch
+    private int totalCustomer = 0;                          // Amount of costomers since launch
     static int ID = 10000;
     
     //Methods
@@ -179,11 +179,11 @@ public class Dyreshop
     
     public int getTotalCostomer()
     {
-        return totalCostomer;
+        return totalCustomer;
     }
     public void setTotalCostomer(int a)
     {
-        totalCostomer = a;
+        totalCustomer = a;
     }
     
     public double getMoneyBack() 
@@ -208,7 +208,7 @@ public class Dyreshop
                 }
             }
             balance -= totalPrice;
-            totalCostomer += 1;
+            totalCustomer += 1;
 //            customer.clear();
             totalPrice = 0;
             return 1;
@@ -231,7 +231,7 @@ public class Dyreshop
      public void addCos(Customer a)
     {
         customer.add(a);
-        totalCostomer = totalCostomer +1;
+        totalCustomer = totalCustomer +1;
         ID = ID+1;
     }
 
@@ -271,5 +271,11 @@ public class Dyreshop
             System.out.println("samlet pris: " + customer.get(i).getPrice() * customer.get(i).getAntal());
         }
     }
+        public void updateBasketWindow(){
+        gui.updateBasketWindow();
+    }
 }
+    
+
+//}
    
