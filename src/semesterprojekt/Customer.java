@@ -19,15 +19,25 @@ public class Customer {
     Mammal mammal;
     public int price;
     public int antal;
+    public String species;
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
     public int ID = 10000;
     
-    public Customer(int price, int antal, int ID)
+    public Customer(int price, int antal, int ID, String species)
     {
         this.price = price;
         this.antal = antal;
         this.ID = ID;
+        this.species = species;
     }
-
+    
     public int getPrice() {
         return price;
     }

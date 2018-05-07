@@ -40,7 +40,7 @@ public class BenytDyreshop
         overview.makeTestData();
         while (gui.isShowing())
         {
-            Customer cus = new Customer(finalPrice, antal, Dyreshop.getID());   // Creating the initial customer object.
+            Customer cus = new Customer(finalPrice, antal, Dyreshop.getID(), gui.getSelectAnimal1());   // Creating the initial customer object.
             dyreshop.addCos(cus);                                               // Creating a new customer object for the ArrayList.
             while(Payment.payButton != true && gui.isShowing())
             {
@@ -128,8 +128,7 @@ public class BenytDyreshop
                 }
                 gui.updateTXT();
 //                dyreshop.printList();
-                gui.updateBasketWindow("tiger", 17);
-                gui.updateBasketWindow("elefant", 40);
+                gui.addToBasket();
 //                dyreshop.printLog();     
             }
             Payment.payButton = false;

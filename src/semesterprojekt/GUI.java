@@ -113,17 +113,9 @@ public class GUI extends javax.swing.JPanel
             receipt1.setTotalPrice(price);
         }
         
-        public void updateBasketWindow(String beskrivelse, int pris)
+        public void addToBasket()
         {
-
-            if (dyreshop.customer.size() > 0 ) 
-            {
-                int c = dyreshop.customer.size();
-                for( int i = 0; c > i; i++) 
-                {
-                    receipt1.addToBasket(beskrivelse, pris);
-                }
-            }
+            receipt1.addToBasket();
         }
         
         

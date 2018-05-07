@@ -60,13 +60,20 @@ public class Receipt extends javax.swing.JPanel
         return totPrice;
     }
 
-    public void addToBasket(String a, int b) 
+    public void addToBasket() 
     {
         DefaultListModel<String> listModel = new DefaultListModel();
-        listModel.addElement(String.format("%d%s"
-                , b
-                , a));
-        receiptBasket.setModel(listModel);
+        if (dyreshop.customer.size() > 0 ) 
+        {
+            for( int i = 0; dyreshop.customer.size() > i; i++) 
+            {
+                listModel.addElement(String.format("%d%s"
+                , dyreshop.customer.get(i).getSpecies()
+                , dyreshop.customer.get(1).getPrice()
+                , dyreshop.customer.get(1).getAntal()));
+            }
+            receiptBasket.setModel(listModel);
+        }
     }
     
     public void updatetxt()
