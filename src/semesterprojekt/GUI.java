@@ -126,8 +126,7 @@ public class GUI extends javax.swing.JPanel
             System.out.println("giver Dyreshoppen");
             this.dyreshop = dyreshop;
             System.out.println("Initialize "+receipt1);
-            
-            receipt1.initialize();
+            receipt1.initialize(dyreshop);
         }
 
         public int selectedPane()

@@ -25,7 +25,7 @@ public class BenytDyreshop
         
         int finalPrice = 0;
         int antal = 0;
-        String selectedAnimal = null;
+        String selectedAnimal = "";
         Receipt receipt = new Receipt();
         PaneDisplay paneDisplay = new PaneDisplay();
         TestData overview = new TestData();
@@ -51,9 +51,6 @@ public class BenytDyreshop
                     {
                         if (gui.getButton1() == true)
                         {
-                            // Print of each variable in the gui.set below, to make sure it works.
-    //                        System.out.println(overview.aquaticList.get(gui.getSelectIndex1()).getPrice());
-    //                        System.out.println(gui.getAntal1());
                             finalPrice = finalPrice + overview.aquaticList.get(gui.getSelectIndex1()).getPrice() * gui.getAntal1();
                             gui.setTotal(finalPrice); 
                             antal = antal + gui.getAntal1();
@@ -132,9 +129,7 @@ public class BenytDyreshop
                     System.out.println(dyreshop.customer.get(i).getAntal());
                 }
                 gui.updateTXT();
-//                dyreshop.printList();
                 gui.addToBasket();
-//                dyreshop.printLog();     
             }
             Payment.payButton = false;
         }

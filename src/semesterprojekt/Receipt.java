@@ -14,7 +14,7 @@ import javax.swing.DefaultListModel;
 public class Receipt extends javax.swing.JPanel 
 {   
     TestData testdata;
-    Dyreshop dyreshop = new Dyreshop();
+    Dyreshop dyreshop;
     GUI gui;
     int ID = 1000000;
     public int totPrice = 0;
@@ -27,11 +27,12 @@ public class Receipt extends javax.swing.JPanel
     
 
     
-    void initialize()
+    void initialize(Dyreshop dyreshop)
     {
         System.out.println("semesterprojekt.Receipt.initialize()");
         costumerID.setText("No:" + Dyreshop.ID);
         totPrice = 0;
+        this.dyreshop = dyreshop;
     }
     
     public void receitRefresh()
@@ -69,8 +70,8 @@ public class Receipt extends javax.swing.JPanel
             {
                 listModel.addElement(String.format("%s%d%d"
                 , dyreshop.customer.get(i).getSpecies()
-                , dyreshop.customer.get(1).getPrice()
-                , dyreshop.customer.get(1).getAntal()));
+                , dyreshop.customer.get(i).getPrice()
+                , dyreshop.customer.get(i).getAntal()));
             }
             receiptBasket.setModel(listModel);
         }
@@ -80,8 +81,8 @@ public class Receipt extends javax.swing.JPanel
     {
         for (int i = 0; i < dyreshop.customer.size(); i++)
         {
-            System.out.println(dyreshop.customer.get(1).getPrice());
-            System.out.println(dyreshop.customer.get(1).getAntal());
+            System.out.println(dyreshop.customer.get(i).getPrice());
+            System.out.println(dyreshop.customer.get(i).getAntal());
         }
     }
     
