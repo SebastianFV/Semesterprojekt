@@ -92,7 +92,7 @@ public class Dyreshop
     
     public void resetBasket()
     {
-            // Nulstille kurv
+            basket.clear();
     }
     
  

@@ -25,13 +25,14 @@ public class Payment extends javax.swing.JPanel {
      * Creates new form Payment
      */
     public Payment() {
-        initComponents();
+        initComponents();        
     }
 
     public boolean getPayment ()
     {
         return payButton;
     }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,7 +75,8 @@ public class Payment extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PaymentCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentCardActionPerformed
-        payButton = true;
+        dyreshop.resetBasket();
+        ejer.updateBasket();
     }//GEN-LAST:event_PaymentCardActionPerformed
 
     private void PaymentCardStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PaymentCardStateChanged

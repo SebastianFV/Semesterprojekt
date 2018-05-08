@@ -12,11 +12,7 @@ import javax.swing.JFrame;
  */
 public class BenytDyreshop 
 {
-    Reptile reptile;
-    Aquatic aquatic;
-    Bird bird;
-    Mammal mammal;
-    Animal animals;
+
     /**
      * @param args the command line arguments
      */

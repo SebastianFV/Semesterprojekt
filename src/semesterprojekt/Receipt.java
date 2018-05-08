@@ -13,7 +13,6 @@ import javax.swing.DefaultListModel;
  */
 public class Receipt extends javax.swing.JPanel 
 {   
-    TestData testdata;
     Dyreshop dyreshop;
     GUI gui;
     int ID = 1000000;
