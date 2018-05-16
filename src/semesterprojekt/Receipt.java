@@ -15,7 +15,6 @@ public class Receipt extends javax.swing.JPanel
 {   
     Dyreshop dyreshop;
     GUI gui;
-    int ID = 1000000;
     public int totPrice = 0;
     
     public Receipt() 

@@ -8,29 +8,27 @@ package semesterprojekt;
 import java.util.ArrayList;
 import java.util.Date;
 public class Dyreshop 
-{
-       
-    //Class-object pointer reference
-    int finalPrice = 0;
-    int antal = 0;
-    String selectedAnimal = "";
-    
+{    
     //List
-    public ArrayList<Basket> basket = new ArrayList<>();       // Contains the content of the basket
-    public ArrayList<Animal> reptileList = new ArrayList<>();
+    public ArrayList<BasketElement> basket = new ArrayList<>();         // Contains the content of the basket
+    public ArrayList<Animal> reptileList = new ArrayList<>();           // grouped list of animals
     public ArrayList<Animal> aquaticList = new ArrayList<>();
     public ArrayList<Animal> birdList = new ArrayList<>();
     public ArrayList<Animal> mammalList = new ArrayList<>();
     
     //Variables
-    private double balance = 0;                             // Amount paid
-    private int soldAnimals = 0;                            // Counts animals sold
-    private double totalPrice = 0;                          // Price to be paid
-    private double earned = 0;                              // Amount earned since launch
     private int totalCustomer = 0;                          // Amount of costomers since launch
     static int ID = 10000;
+
+    public int getTotalCustomer() {
+        return totalCustomer;
+    }
+
+    public void setTotalCustomer(int totalCustomer) {
+        this.totalCustomer = totalCustomer;
+    }
     
-    Dyreshop()
+    Dyreshop()                                              // Testdata
     {
         reptileList.add(new Reptile (2, 50, 500, "Snake", 100, false, true, 500, true, 500));
         reptileList.add(new Reptile (7, 75, 1000, "Turtle", 75, true, true, 500, true, 100));
@@ -83,10 +81,10 @@ public class Dyreshop
     public void addtobasket(String dyr, int pris, int antal) 
     {
         try{
-            basket.add(new Basket(dyr, pris, antal));
+            basket.add(new BasketElement(dyr, pris, antal));
         }
-        catch(ArithmeticException ex){
-            System.out.println("Cant do that");
+        catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
         }
     }
     

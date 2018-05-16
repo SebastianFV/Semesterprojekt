@@ -1,13 +1,13 @@
 
 package semesterprojekt;
 
-public class Basket {
+public class BasketElement {
     String dyr;
     int pris;
     int antal;
 
 
-    Basket(String dyr, int pris, int antal) 
+    BasketElement(String dyr, int pris, int antal) 
     {
         this.dyr = dyr;
         this.pris = pris;

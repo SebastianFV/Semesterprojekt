@@ -27,7 +27,7 @@ public class DyreshopTest {
         assertEquals(0, dyr.basket.size());
         dyr.addtobasket("testmus", 2, 2);
         assertEquals(1, dyr.basket.size());       
-    }
-    
-    
+    }    
 }
+
+

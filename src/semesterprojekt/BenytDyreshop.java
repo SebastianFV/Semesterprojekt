@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package semesterprojekt;
-import java.util.ArrayList;
 import javax.swing.JFrame;
 /**
  *

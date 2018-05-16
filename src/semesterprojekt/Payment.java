@@ -77,6 +77,7 @@ public class Payment extends javax.swing.JPanel {
     private void PaymentCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentCardActionPerformed
         dyreshop.resetBasket();
         ejer.updateBasket();
+        dyreshop.setTotalCustomer(dyreshop.getTotalCustomer() +1);
     }//GEN-LAST:event_PaymentCardActionPerformed
 
     private void PaymentCardStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PaymentCardStateChanged
